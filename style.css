@@ -11,6 +11,13 @@ body {
     color: white;
 }
 
+/* Ustawienie stopki zawsze na dole */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Nagłówek */
 header {
     display: flex;
@@ -117,7 +124,9 @@ nav {
 }
 
 /* Układ strony */
+/* Kontener obejmujący całą stronę */
 .container {
+    flex: 1; /* Zapewnia, że stopka nie podniesie się do góry, jeśli treści jest mało */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -152,7 +161,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5); /* Cień od strony nagłówka */
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.5); /* Cień na stopkę */
+    /* Efekt rozmycia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Dla Safari */
 }
 
 .sidebar h2 {
