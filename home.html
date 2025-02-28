@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMeBaby Blog</title>
+    <meta property="og:title" content="Blog Programistyczny">
+    <meta property="og:description" content="Najlepsze kursy programowania - HTML, CSS, JavaScript, C#, Python i wiele więcej!">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prism.js dla syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+
+   <!-- Import czcionki Poppins z Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script defer src="script.js"></script>
+    <style>
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(-2deg);
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CodeMeBaby</div>
+        <nav>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Wysuwane menu -->
+    <div class="side-menu">
+        <button class="close-menu">&times;</button>
+        <ul>
+            <li><a href="#">Strona Główna</a></li>
+            <li><a href="#">Kursy</a></li>
+            <li><a href="#">Projekty</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Tematy</h2>
+            <ul>
+                <li><a href="#">HTML i CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">C#</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>Witaj na blogu programistycznym</h1>
+            <p>Odkryj kursy, poradniki i projekty, które pomogą Ci rozwijać umiejętności programistyczne.</p>
+            
+            <section class="courses">
+                <h2>Proponowane Kursy</h2>
+                
+                <div class="course-wrapper">
+                    <div class="course-container">
+                        <div class="course-card">
+                            <h3>C#</h3>
+                            <a href="#">Zobacz więcej</a>
+                        </div>
+                        <div class="course-card">
+                            <h3>JavaScript</h3>
+                            <a href="#">Zobacz więcej</a>
+                        </div>
+                        <div class="course-card">
+                            <h3>C++</h3>
+                            <a href="#">Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CodeMeBaby | Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script>
+        console.log(`
+          /$$$$$$                  /$$          
+         /$$__  $$                | $$          
+        | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$ 
+        | $$       /$$__  $$ /$$__  $$ /$$__  $$
+        | $$      | $$  \ $$| $$  | $$| $$$$$$$$
+        | $$    $$| $$  | $$| $$  | $$| $$_____/
+        |  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+        \______/  \______/  \_______/ \_______/
+
+            😃 Witaj, deweloperze! Miłego kodowania! 🚀
+        `);
+    </script>
+</body>
+</html>
