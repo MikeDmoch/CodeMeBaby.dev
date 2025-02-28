@@ -30,6 +30,9 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    /* Cień rzucany na treść strony */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
 }
 
 .logo {
@@ -134,14 +137,27 @@ nav {
     padding: 20px;
 }
 
-/* Stopka */
+/* Stopka rzucająca cień i rozmywająca tło */
 footer {
     text-align: center;
     padding: 15px;
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.1);
-}
+    background: rgba(255, 255, 255, 0.1); /* Półprzezroczyste tło */
+    
+    /* Stopka zawsze na dole */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 
+    /* Efekt rozmycia */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Dla Safari */
+
+    /* Cień rzucany na treść strony */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+
+    /* Upewnienie się, że stopka jest nad innymi elementami */
+    z-index: 1001;
+}
 /* Responsywność */
 @media (max-width: 1024px) {
     .nav-links {
