@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    
+    <link rel="stylesheet" href="CSharpStyle.css">
+
+    <!-- Prism.js dla syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+<!-- Import czcionki Poppins z Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Pierwszy program</title>
+</head>
+<body>
+    
+    <h1>Pierwszy program w C#</h1>
+    <p>Jeśli dopiero zaczynasz swoją przygodę z językiem C#, pierwszym krokiem jest 
+        napisanie klasycznego programu "Hello, World!". W tym artykule omówimy, jak 
+        stworzyć ten prosty i klasyczny już program oraz przeanalizujemy jego działanie.</p> <br>
+    <b>Oto najprostszy kod w C#, który wypisuje "Witaj, świecie!" na ekranie:</b>
+    <pre><code class="language-csharp"> 
+        using System;
+        
+        class Program {
+            static void Main() {
+                Console.WriteLine("Witaj, świecie!");
+            }
+        }
+    </code></pre>
+    <h3>Omówienie kodu</h3>
+    <pre><code class="language-csharp"> 
+        using System;
+    </code></pre>
+    <p>Ta linia importuje przestrzeń nazw System, która zawiera podstawowe funkcje wejścia 
+        i wyjścia, w tym Console.WriteLine.
+    </p>
+    <pre><code class="language-csharp"> 
+        class Program
+    </code></pre>
+    <p>Deklaracja klasy Program, która jest punktem wejścia dla aplikacji.</p>
+    <pre><code class="language-csharp"> 
+        static void Main()
+    </code></pre>
+    <p>Metoda Main jest główną metodą programu, od której zaczyna się jego wykonanie. 
+        Słowo kluczowe static oznacza, że metoda należy do klasy i nie wymaga utworzenia
+         instancji obiektu. void oznacza, że metoda nie zwraca żadnej wartości.
+    </p>
+    <pre><code class="language-csharp"> 
+        Console.WriteLine("Witaj, świecie!");
+    </code></pre>
+    <p>Wywołujemy metodę WriteLine z klasy Console, aby wypisać tekst na standardowe wyjście (konsolę).</p>
+    <br>
+    <h3>Alternatywna wersja kodu</h3>
+    <p>W nowszych wersjach C# (od C# 9.0) można używać tzw. "top-level statements", co pozwala uprościć kod:</p>
+    
+    <pre><code class="language-csharp"> 
+        Console.WriteLine("Witaj, świecie!");
+    </code></pre>
+    <p>W tej wersji nie musimy definiować klasy ani metody Main(), 
+        ponieważ kompilator automatycznie tworzy punkt wejścia.</p>
+</body>
+</html>
