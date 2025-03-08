@@ -203,9 +203,11 @@ footer {
 }
 
 /* Stały pasek boczny po lewej */
+/* Stały pasek boczny po lewej */
 .sidebar {
     width: 250px;
-    height: 100vh; /* Pełna wysokość ekranu */
+    max-height: 100vh; /* Maksymalna wysokość na cały ekran */
+    overflow-y: auto; /* Umożliwia przewijanie góra-dół */
     background: rgba(255, 255, 255, 0.08);
     padding: 20px;
     position: fixed;
@@ -214,11 +216,25 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.5); /* Cień na stopkę */
-    /* Efekt rozmycia */
+    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.5); /* Cień */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* Dla Safari */
 }
+
+/* Ukrycie paska przewijania w nowoczesnych przeglądarkach */
+.sidebar::-webkit-scrollbar {
+    width: 6px; /* Szerokość paska */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: cyan; /* Kolor suwaka */
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Tło paska przewijania */
+}
+
 
 /* Napis "Tematy" niżej w pasku bocznym */
 .sidebar h2 {
