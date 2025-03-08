@@ -1,68 +1,145 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    
-    <link rel="stylesheet" href="CSharpStyle.css">
-
-    <!-- Prism.js dla syntax highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-<!-- Import czcionki Poppins z Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <title>Pierwszy program</title>
-</head>
-<body>
-    
-    <h1>Pierwszy program w C#</h1>
-    <p>Jeśli dopiero zaczynasz swoją przygodę z językiem C#, pierwszym krokiem jest 
-        napisanie klasycznego programu "Hello, World!". W tym artykule omówimy, jak 
-        stworzyć ten prosty i klasyczny już program oraz przeanalizujemy jego działanie.</p> <br>
-    <b>Oto najprostszy kod w C#, który wypisuje "Witaj, świecie!" na ekranie:</b>
-    <pre><code class="language-csharp"> 
-        using System;
+    <!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeMeBaby.dev Blog</title>
+        <meta property="og:title" content="CodeMeBaby">
+        <meta property="og:description" content="Najlepsze kursy programowania - HTML, CSS, JavaScript, C#, Python i wiele więcej!">
+        <meta property="og:image" content="https://codemebaby.dev.com/og-image.jpg">
+        <meta property="og:url" content="https://codemebaby.dev">
+        <meta property="og:type" content="website">
         
-        class Program {
-            static void Main() {
-                Console.WriteLine("Witaj, świecie!");
+        <link rel="stylesheet" href="CSharpStyle.css">
+
+        <!-- Prism.js dla syntax highlighting -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <!-- Import czcionki Poppins z Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Import czcionki Fira Code z Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <script defer src="../script.js"></script>
+        <style>
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out;
             }
-        }
-    </code></pre>
-    <h3>Omówienie kodu</h3>
-    <pre><code class="language-csharp"> 
-        using System;
-    </code></pre>
-    <p>Ta linia importuje przestrzeń nazw System, która zawiera podstawowe funkcje wejścia 
-        i wyjścia, w tym Console.WriteLine.
-    </p>
-    <pre><code class="language-csharp"> 
-        class Program
-    </code></pre>
-    <p>Deklaracja klasy Program, która jest punktem wejścia dla aplikacji.</p>
-    <pre><code class="language-csharp"> 
-        static void Main()
-    </code></pre>
-    <p>Metoda Main jest główną metodą programu, od której zaczyna się jego wykonanie. 
-        Słowo kluczowe static oznacza, że metoda należy do klasy i nie wymaga utworzenia
-         instancji obiektu. void oznacza, że metoda nie zwraca żadnej wartości.
-    </p>
-    <pre><code class="language-csharp"> 
-        Console.WriteLine("Witaj, świecie!");
-    </code></pre>
-    <p>Wywołujemy metodę WriteLine z klasy Console, aby wypisać tekst na standardowe wyjście (konsolę).</p>
-    <br>
-    <h3>Alternatywna wersja kodu</h3>
-    <p>W nowszych wersjach C# (od C# 9.0) można używać tzw. "top-level statements", co pozwala uprościć kod:</p>
-    
-    <pre><code class="language-csharp"> 
-        Console.WriteLine("Witaj, świecie!");
-    </code></pre>
-    <p>W tej wersji nie musimy definiować klasy ani metody Main(), 
-        ponieważ kompilator automatycznie tworzy punkt wejścia.</p>
-</body>
-</html>
+
+            .logo:hover {
+                transform: scale(1.05) rotate(-2deg);
+                color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="../home.html" style="text-decoration: none; color: inherit;">CodeMeBaby.dev</a></div>
+            <nav>
+                <button class="menu-toggle">☰</button>
+            </nav>
+        </header>
+
+        <!-- Wysuwane menu -->
+        <div class="side-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="#">Strona Główna</a></li>
+                <li><a href="#">Kursy</a></li>
+                <li><a href="#">Projekty</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Kurs C#</h2>
+                <ul>
+                    <li><a href="1Basics.html">Wprowadzenie</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <div class="header-container">
+                    <h1>Pierwszy program w C#</h1>
+                </div>
+                    <p>Jeśli dopiero zaczynasz swoją przygodę z językiem C#, pierwszym krokiem jest 
+                        napisanie klasycznego programu "Hello, World!". W tym artykule omówimy, jak 
+                        stworzyć ten prosty i klasyczny już program oraz przeanalizujemy jego działanie.</p> <br>
+                    <b>Oto najprostszy kod w C#, który wypisuje "Witaj, świecie!" na ekranie:</b>
+                    <pre><code class="language-csharp"> 
+                        using System;
+                        
+                        class Program {
+                            static void Main() {
+                                Console.WriteLine("Witaj, świecie!");
+                            }
+                        }
+                    </code></pre>
+                    <h3>Omówienie kodu</h3>
+                    <pre><code class="language-csharp"> 
+                        using System;
+                    </code></pre>
+                    <p>Ta linia importuje przestrzeń nazw System, która zawiera podstawowe funkcje wejścia 
+                        i wyjścia, w tym Console.WriteLine.
+                    </p>
+                    <pre><code class="language-csharp"> 
+                        class Program
+                    </code></pre>
+                    <p>Deklaracja klasy Program, która jest punktem wejścia dla aplikacji.</p>
+                    <pre><code class="language-csharp"> 
+                        static void Main()
+                    </code></pre>
+                    <p>Metoda Main jest główną metodą programu, od której zaczyna się jego wykonanie. 
+                        Słowo kluczowe static oznacza, że metoda należy do klasy i nie wymaga utworzenia
+                         instancji obiektu. void oznacza, że metoda nie zwraca żadnej wartości.
+                    </p>
+                    <pre><code class="language-csharp"> 
+                        Console.WriteLine("Witaj, świecie!");
+                    </code></pre>
+                    <p>Wywołujemy metodę WriteLine z klasy Console, aby wypisać tekst na standardowe wyjście (konsolę).</p>
+                    <br>
+                    <h3>Alternatywna wersja kodu</h3>
+                    <p>W nowszych wersjach C# (od C# 9.0) można używać tzw. "top-level statements", co pozwala uprościć kod:</p>
+                    
+                    <pre><code class="language-csharp"> 
+                        Console.WriteLine("Witaj, świecie!");
+                    </code></pre>
+                    <p>W tej wersji nie musimy definiować klasy ani metody Main(), 
+                        ponieważ kompilator automatycznie tworzy punkt wejścia.</p>
+                <br><br><br>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 CodeMeBaby | Wszystkie prawa zastrzeżone.</p>
+        </footer>
+
+        <script>
+            console.log(`
+              /$$$$$$                  /$$          
+             /$$__  $$                | $$          
+            | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$ 
+            | $$       /$$__  $$ /$$__  $$ /$$__  $$
+            | $$      | $$  \ $$| $$  | $$| $$$$$$$$
+            | $$    $$| $$  | $$| $$  | $$| $$_____/
+            |  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+            \______/  \______/  \_______/ \_______/
+
+                😃 Witaj, deweloperze! Miłego kodowania! 🚀
+            `);
+        </script>
+    </body>
+    </html>
