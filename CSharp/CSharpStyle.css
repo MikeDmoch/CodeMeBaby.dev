@@ -255,10 +255,12 @@ footer {
 .sidebar ul {
     list-style: none;
     margin-top: 10px;
+    padding: 0; /* Usunięcie domyślnego paddingu */
+    padding-bottom: 50px; /* Zapewnia odstęp na dole */
 }
 
 .sidebar ul li {
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .sidebar ul li a {
@@ -415,4 +417,15 @@ pre.line-numbers {
 .line-numbers-rows span {
     color: rgba(255, 255, 255, 0.5); /* Kolor numerów linii */
     padding-right: 10px;
+}
+
+::selection {
+    background: cyan; /* Kolor tła zaznaczonego tekstu */
+    color: black; /* Kolor tekstu */
+}
+
+/* Dla przeglądarek opartych na WebKit (Chrome, Safari) */
+::-moz-selection {
+    background: cyan;
+    color: black;
 }
