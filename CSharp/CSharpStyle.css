@@ -203,38 +203,47 @@ footer {
 }
 
 /* Stały pasek boczny po lewej */
-/* Stały pasek boczny po lewej */
 .sidebar {
     width: 250px;
-    height: 100vh; /* Wysokość na cały ekran */
-    max-height: 100vh; /* Maksymalna wysokość na cały ekran */
-    overflow-y: auto; /* Umożliwia przewijanie góra-dół */
+    height: 100vh; /* Pełna wysokość ekranu */
+    overflow-y: auto; /* Umożliwia przewijanie zawartości */
     background: rgba(255, 255, 255, 0.08);
     padding: 20px;
-    position: fixed;
+    
+    position: fixed; /* Utrzymuje sidebar przy lewej krawędzi */
     top: 0;
-    left: 0;
+    left: 0; /* Przyleganie do lewej ścianki */
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.5); /* Cień */
-    backdrop-filter: blur(10px);
+
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5); /* Cień */
+    backdrop-filter: blur(10px); /* Efekt rozmycia */
     -webkit-backdrop-filter: blur(10px); /* Dla Safari */
 }
 
-/* Ukrycie paska przewijania w nowoczesnych przeglądarkach */
+/* Ulepszony efekt przewijania – przewija się tylko zawartość */
+.sidebar ul {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 50px; /* Dodatkowy odstęp na dole */
+}
+
+/* Ukrycie paska przewijania dla nowoczesnych przeglądarek */
 .sidebar::-webkit-scrollbar {
-    width: 6px; /* Szerokość paska */
+    width: 6px;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-    background: cyan; /* Kolor suwaka */
+    background: cyan;
     border-radius: 10px;
 }
 
 .sidebar::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1); /* Tło paska przewijania */
+    background: rgba(255, 255, 255, 0.1);
 }
+
 
 
 /* Napis "Tematy" niżej w pasku bocznym */
