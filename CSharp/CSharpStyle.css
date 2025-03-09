@@ -392,7 +392,27 @@ pre {
 
 
 code {
-    font-family: 'Fira Code', monospace; /* Profesjonalna czcionka dla programistów */
+    
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; /* Profesjonalna czcionka dla programistów */
     font-size: 16px;
     color: cyan;
+}
+
+/* Styl numeracji linii */
+pre.line-numbers {
+    padding-left: 3.5em; /* Odsunięcie dla numerów */
+    position: relative;
+}
+
+/* Styl numerów */
+.line-numbers .line-numbers-rows {
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Lekko przezroczysta linia oddzielająca */
+}
+
+.line-numbers-rows span {
+    color: rgba(255, 255, 255, 0.5); /* Kolor numerów linii */
+    padding-right: 10px;
 }
