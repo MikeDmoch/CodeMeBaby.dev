@@ -111,34 +111,34 @@
                         stworzyć ten prosty i klasyczny już program oraz przeanalizujemy jego działanie.</p> <br>
                     <b>Oto najprostszy kod w C#, który wypisuje "Witaj, świecie!" na ekranie:</b>
                     <pre><code class="language-csharp"> 
-                        using System;
+using System;
                         
-                        class Program {
-                            static void Main() {
-                                Console.WriteLine("Witaj, świecie!");
-                            }
-                        }
+class Program {
+    static void Main() {
+        Console.WriteLine("Witaj, świecie!");
+    }
+}
                     </code></pre>
                     <h3>Omówienie kodu</h3>
                     <pre><code class="language-csharp"> 
-                        using System;
+using System;
                     </code></pre>
                     <p>Ta linia importuje przestrzeń nazw System, która zawiera podstawowe funkcje wejścia 
                         i wyjścia, w tym Console.WriteLine.
                     </p>
                     <pre><code class="language-csharp"> 
-                        class Program
+class Program
                     </code></pre>
                     <p>Deklaracja klasy Program, która jest punktem wejścia dla aplikacji.</p>
                     <pre><code class="language-csharp"> 
-                        static void Main()
+static void Main()
                     </code></pre>
                     <p>Metoda Main jest główną metodą programu, od której zaczyna się jego wykonanie. 
                         Słowo kluczowe static oznacza, że metoda należy do klasy i nie wymaga utworzenia
                          instancji obiektu. void oznacza, że metoda nie zwraca żadnej wartości.
                     </p>
                     <pre><code class="language-csharp"> 
-                        Console.WriteLine("Witaj, świecie!");
+Console.WriteLine("Witaj, świecie!");
                     </code></pre>
                     <p>Wywołujemy metodę WriteLine z klasy Console, aby wypisać tekst na standardowe wyjście (konsolę).</p>
                     <br>
@@ -146,7 +146,7 @@
                     <p>W nowszych wersjach C# (od C# 9.0) można używać tzw. "top-level statements", co pozwala uprościć kod:</p>
                     
                     <pre><code class="language-csharp"> 
-                        Console.WriteLine("Witaj, świecie!");
+Console.WriteLine("Witaj, świecie!");
                     </code></pre>
                     <p>W tej wersji nie musimy definiować klasy ani metody Main(), 
                         ponieważ kompilator automatycznie tworzy punkt wejścia.</p>

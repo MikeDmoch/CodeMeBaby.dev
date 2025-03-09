@@ -2,7 +2,7 @@
     <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CodeMeBaby.dev Blog</title>
         <meta property="og:title" content="CodeMeBaby">
         <meta property="og:description" content="Najlepsze kursy programowania - HTML, CSS, JavaScript, C#, Python i wiele więcej!">
@@ -112,10 +112,10 @@
                         </ul>
                         <p>Przykładowa deklaracja zmiennej:</p><br>
                         <pre><code class="language-csharp"> 
-int liczba = 10;
+                            int liczba = 10;
                         </code></pre>
                         <p>Powyższa linia kodu deklaruje zmienną liczba typu int i przypisuje jej wartość 10. 
-                            Warto zaznaczyć, że typ int oznacza liczbę całkowitą (od ang. integer - liczba całkowita).</p><br>
+                            Warto zauważyć, że typ int oznacza liczbę całkowitą.</p><br>
                         <h3>Dlaczego warto używać zmiennych?</h3>
                         <p>Pozwalają one na dynamiczne zarządzanie danymi w trakcie działania programu. 
                             Dzięki nim możemy przechowywać dane wejściowe użytkownika, wyniki obliczeń czy 
@@ -177,100 +177,6 @@ int liczba = 10;
                                     <td>1 bajt</td>
                                     <td>true lub false</td>
                                 </tr>
-                            </table>        
-                            <p>Przykłady</p>
-                            <pre><code class="language-csharp"> 
-int wiek = 25;
-double temperatura = 36.6;
-bool czyPada = false;
-char litera = 'A';  
-                            </code></pre>
-                            <p>Warto zauważyć, że typy zmiennoprzecinkowe (float, double, decimal) różnią się precyzją - 
-                                decimal jest zalecany do obliczeń finansowych, gdzie dokładność ma kluczowe znaczenie.</p><br>
-                            <h4>Typy referencyjne</h4>
-                            <p>Typy referencyjne przechowują adresy w pamięci, a nie bezpośrednie wartości. Zmienna ta
-                                przechowuje wskaźnik do rzeczywistej wartości znajdującej się na stercie pamięci.</p>
-                                <!--Tabela2-->
-                                <table>
-                                    <tr>
-                                        <th><strong>Typ</strong></th>
-                                        <th><strong></strong>Opis</th>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>string</strong></td>
-                                        <td>Przechowuje ciąg znaków</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>object</strong></td>
-                                        <td>Podstawowy typ dla wszystkich innych typów</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>dynamic</strong></td>
-                                        <td>Typ określany w czasie wykonywania</td>
-                                    </tr>
-                                </table>
-                                <pre><code class="language-csharp">
-string imie = "Tomasz";
-object dowolnaZmienna = 42;
-dynamic zmienna = "Tekst";
-zmienna = 100; // Może zmieniać typ w czasie działania
-                                </code></pre>
-                                <p>Każda wartość może być przypisana do typu object. 
-                                    dynamic z kolei pozwala na zmianę typu zmiennej w trakcie 
-                                    działania programu, co może prowadzić do potencjalnych błędów.</p><br>
-                                <h3>Inicjalizacja i przypisywanie wartości</h3>
-                                <p>Deklarując zmienną, możemy od razu przypisać jej wartość lub zrobić to później:</p>
-                                <pre><code class="language-csharp">
-// Deklaracja i inicjalizacja
-int liczba = 5;
-
-// Deklaracja i późniejsze przypisanie wartości
-string nazwisko;
-nazwisko = "Kowalski";
-                                </code></pre>
-                                <p>Należy pamiętać, że zmienne muszą być inicjalizowane przed ich użyciem. 
-                                    W przeciwnym razie kompilator zgłosi błąd.</p>
-                                <h4>Zmienna a stała</h4>
-                                <p>Jeśli nie chcemy, aby wartość zmiennej uległa zmianie, możemy użyć
-                                    słów kluczowych const lub readonly.</p> 
-                                    <pre><code class="language-csharp">
-const double Pi = 3.14159;
-                                    </code></pre><br>
-                                    <h3>Zakres działania zmiennych</h3>
-                                    <p>Zakres zmiennej odnosi się do obszaru w kodzie, w którym można jej używać.</p><br>
-                                    <h4>Zmienne lokalne</h4>
-                                    <p>Te deklarowane w blokach kodu tj. pomiędzy nawiasami klamerkowymi {} są dostępne 
-                                        tylko w obszarze tego bloku, np. w 
-                                        metodach dostępne są tylko wewnątrz tej metody. 
-                                        Temat metod został szczegółowo omówiony w późniejszym artykule.</p>
-                                        <pre><code class="language-csharp">
-void Przyklad()
-{
-    int x = 10; // x istnieje tylko wewnątrz tej metody
-}
-                                        </code></pre><br>  
-                                        <h4>Zmienne globalne</h4>
-                                        <p>Te zadeklarowane poza pomniejszymi blokami kodu (np. poza metodami) są dostępne w całym programie. 
-                                            Należy jednak unikać nadmiernego używania zmiennych globalnych, 
-                                            ponieważ mogą prowadzić do błędów i utrudniać debugowanie.</p>
-                                        <pre><code class="language-csharp">
-class Program {
-    static int globalnaZmienna = 10; // Zmienna globalna
-
-    static void Main() {
-        Console.WriteLine(globalnaZmienna); // Dostęp do zmiennej globalnej
-        ZmienGlobalna();
-        Console.WriteLine(globalnaZmienna); // Zmieniona wartość zmiennej globalnej
-    }
-
-    static void ZmienGlobalna() {
-       globalnaZmienna = 20; // Zmiana wartości zmiennej globalnej
-    }
-}
-                                        </code></pre><br>
-                                        <h3>Podsumowanie</h3>
-                                        <p>W tym artykule szczegółowo omówiliśmy zmienne w C#, ich typy oraz zakres. Warto pamiętać, że dobrze dobrane typy zmiennych zwiększają czytelność kodu oraz poprawiają wydajność aplikacji. Korzystaj z const dla wartości stałych, readonly dla pól, które powinny być przypisane raz, a var dla zmiennych, których typ jest oczywisty. Pamiętaj również, że nadmierne użycie dynamic może prowadzić do trudniejszych do wykrycia błędów.
-                                            <br>Mam nadzieję, że ten przewodnik pomógł Ci lepiej zrozumieć, jak zarządzać zmiennymi w C#!</p>
                         <br><br><br>
             </main>
         </div>
