@@ -110,6 +110,7 @@ nav {
     font-size: 28px;
     cursor: pointer;
     z-index: 1001;
+    margin-right: 10px;
 }
 
 /* Wysuwane menu boczne */
