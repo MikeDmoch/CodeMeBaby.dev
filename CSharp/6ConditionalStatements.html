@@ -98,6 +98,39 @@
             <p>Instrukcje warunkowe pozwalają na sterowanie przepływem programu na podstawie określonych warunków. 
                 W tym artykule omówimy wszystkie kluczowe aspekty instrukcji warunkowych w C#, od podstawowych po bardziej 
                 zaawansowane konstrukcje.</p>
+                <h3>Podstawowa instrukcja if</h3>
+                <p>Najczęściej stosowaną instrukcją warunkową w C# jest <code>if</code>. 
+                    Umożliwia ona wykonanie bloku kodu tylko wtedy, gdy dany warunek zostanie spełniony.</p>
+                    <br><p>Składnia:</p>
+                    <pre><code class="language-csharp">
+if (warunek)
+{
+    // kod do wykonania, jeśli warunek jest spełniony
+}
+                    </code></pre>
+                    <p>Przykład:</p>
+                    <pre><code class="language-csharp">int liczba = 10;
+if (liczba > 5)
+{
+    Console.WriteLine("Liczba jest większa niż 5.");
+}
+                    </code></pre>
+                    <h3>Instrukcja else</h3>
+                    <p>Jeżeli chcemy wykonać jedną operację w przypadku spełnienia warunku i 
+                        inną w przeciwnym przypadku, możemy użyć konstrukcji <code>if-else</code>.</p>
+                    <br><p>Składnia:</p>
+                    <pre><code class="language-csharp">
+int liczba = 3;
+if (liczba > 5)
+{
+    Console.WriteLine("Liczba jest większa niż 5.");
+}
+else
+{
+    Console.WriteLine("Liczba jest mniejsza lub równa 5.");
+}
+                    </code></pre>
+                    <h3>Instrukcja else if</h3>
                     <br><br><br>
             </main>
         </div>  
