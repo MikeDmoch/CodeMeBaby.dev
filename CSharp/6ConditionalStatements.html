@@ -11,6 +11,8 @@
         <meta property="og:type" content="website">
         
         <link rel="stylesheet" href="/CSharp/CSharpStyle.css">
+<!-- Wtyczka do numerowania linii -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
         <!-- Prism.js dla syntax highlighting -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
@@ -97,29 +99,29 @@
             </div>  
             <p>Instrukcje warunkowe pozwalają na sterowanie przepływem programu na podstawie określonych warunków. 
                 W tym artykule omówimy wszystkie kluczowe aspekty instrukcji warunkowych w C#, od podstawowych po bardziej 
-                zaawansowane konstrukcje.</p>
+                zaawansowane konstrukcje.</p><br>
                 <h3>Podstawowa instrukcja if</h3>
                 <p>Najczęściej stosowaną instrukcją warunkową w C# jest <code>if</code>. 
                     Umożliwia ona wykonanie bloku kodu tylko wtedy, gdy dany warunek zostanie spełniony.</p>
                     <br><p>Składnia:</p>
-                    <pre><code class="language-csharp">
+                    <pre class="line-numbers"><code class="language-csharp">
 if (warunek)
 {
     // kod do wykonania, jeśli warunek jest spełniony
 }
                     </code></pre>
                     <p>Przykład:</p>
-                    <pre><code class="language-csharp">int liczba = 10;
+                    <pre class="line-numbers"><code class="language-csharp">int liczba = 10;
 if (liczba > 5)
 {
     Console.WriteLine("Liczba jest większa niż 5.");
 }
-                    </code></pre>
+                    </code></pre><br>
                     <h3>Instrukcja else</h3>
                     <p>Jeżeli chcemy wykonać jedną operację w przypadku spełnienia warunku i 
                         inną w przeciwnym przypadku, możemy użyć konstrukcji <code>if-else</code>.</p>
-                    <br><p>Składnia:</p>
-                    <pre><code class="language-csharp">
+                    <br><p>Przykład:</p>
+                    <pre class="line-numbers"><code class="language-csharp">
 int liczba = 3;
 if (liczba > 5)
 {
@@ -129,11 +131,11 @@ else
 {
     Console.WriteLine("Liczba jest mniejsza lub równa 5.");
 }
-                    </code></pre>
+                    </code></pre><br>
                     <h3>Instrukcja else if</h3>
                     <p>Warto stosować, gdy mamy więcej niż 2 warunki.</p>
-                    <pre><code class="language-csharp">
-                        int liczba = 0;
+                    <pre class="line-numbers"><code class="language-csharp">
+int liczba = 0;
 if (liczba > 0)
 {
     Console.WriteLine("Liczba jest dodatnia.");
@@ -146,28 +148,28 @@ else
 {
     Console.WriteLine("Liczba jest równa zero.");
 }
-                    </code></pre>
+                    </code></pre><br>
                     <h3>Operator trójargumentowy :?</h3>
                     <p>Został omówiony przy temacie Operatory. Przypomnijmy jednak jego użycie.
                         Operator trójargumentowy (?:) to skrócona forma instrukcji warunkowej if-else.
                     </p>
                     <p>Składnia:</p>
-                    <pre><code class="language-csharp">
+                    <pre class="line-numbers"><code class="language-csharp">
 warunek ? wartość_jeśli_prawda : wartość_jeśli_fałsz;
                     </code></pre>
                     <p>Przykład:</p>
-                    <pre><code class="language-csharp">
+                    <pre class="line-numbers"><code class="language-csharp">
 int liczba = 7;
 string wynik = (liczba % 2 == 0) ? "Parzysta" : "Nieparzysta";
 Console.WriteLine(wynik);
-                    </code></pre>
+                    </code></pre><br>
 
                     <h3>Switch</h3>
                     <p>Instrukcja <code>switch</code> pozwala na wybór jednej z wielu opcji na 
                         podstawie wartości wyrażenia. Jest lepszym rozwiązaniem niż wielokrotność wyrażeń <code>else if</code>
                     jeśli sprawdzamy wartość tylko jednej zmiennej.</p>
-                    <pre><code class="language-csharp">
-                        int dzienTygodnia = 3;
+                    <pre class="line-numbers"><code class="language-csharp">
+int dzienTygodnia = 3;
 switch (dzienTygodnia)
 {
     case 1:
@@ -180,11 +182,45 @@ switch (dzienTygodnia)
         Console.WriteLine("Środa");
         break;
     default:
-        Console.WriteLine("Nieznany dzień tygodnia");
+        Console.WriteLine("Inny dzień tygodnia");
         break;
 }
                     </code></pre>
-                    <br><br><br>
+<h4>Switch w nowoczesnej wersji C#</h4>
+<p>Od C# 8.0 można stosować switch w wersji wyrażeniowej.</p>
+<pre class="line-numbers"><code class="language-csharp">
+int dzien = 3;
+string nazwaDnia = dzien switch
+{
+    1 => "Poniedziałek",
+    2 => "Wtorek",
+    3 => "Środa",
+    _ => "Inny dzień tygodnia"
+};
+Console.WriteLine(nazwaDnia);
+</code></pre><br>
+                    <h3>Zagnieżdżone instrukcje warunkowe</h3>
+                    <p>Instrukcje warunkowe mogą być zagnieżdżane, czyli umieszczane wewnątrz siebie.</p>
+                    <br><p>Przykład:</p>
+                    <pre class="line-numbers"><code class="language-csharp">
+int a = 10;
+int b = 20;
+if (a > 5)
+{
+    if (b > 15)
+    {
+        Console.WriteLine("Oba warunki są spełnione.");
+    }
+}
+                    </code></pre><br>
+                    <h3>Podsumowanie</h3>
+                    <p>Instrukcje warunkowe są niezbędnym elementem każdego języka programowania, w tym C#. 
+            Pozwalają one na podejmowanie decyzji w kodzie na podstawie określonych kryteriów. 
+            Znajomość tych konstrukcji pozwala na tworzenie bardziej elastycznych i dynamicznych aplikacji.</p>
+        <p>W kolejnych artykułach omówimy bardziej zaawansowane techniki programowania w C#, 
+            które pozwolą na jeszcze lepsze wykorzystanie możliwości tego języka.</p>
+                    
+            <br><br><br>
             </main>
         </div>  
 
