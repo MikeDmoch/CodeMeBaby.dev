@@ -148,7 +148,42 @@ else
 }
                     </code></pre>
                     <h3>Operator trójargumentowy :?</h3>
-                    <p>Został omówiony przy temacie Operatory. Przypomnijmy jednak jego użycie.</p>
+                    <p>Został omówiony przy temacie Operatory. Przypomnijmy jednak jego użycie.
+                        Operator trójargumentowy (?:) to skrócona forma instrukcji warunkowej if-else.
+                    </p>
+                    <p>Składnia:</p>
+                    <pre><code class="language-csharp">
+warunek ? wartość_jeśli_prawda : wartość_jeśli_fałsz;
+                    </code></pre>
+                    <p>Przykład:</p>
+                    <pre><code class="language-csharp">
+int liczba = 7;
+string wynik = (liczba % 2 == 0) ? "Parzysta" : "Nieparzysta";
+Console.WriteLine(wynik);
+                    </code></pre>
+
+                    <h3>Switch</h3>
+                    <p>Instrukcja <code>switch</code> pozwala na wybór jednej z wielu opcji na 
+                        podstawie wartości wyrażenia. Jest lepszym rozwiązaniem niż wielokrotność wyrażeń <code>else if</code>
+                    jeśli sprawdzamy wartość tylko jednej zmiennej.</p>
+                    <pre><code class="language-csharp">
+                        int dzienTygodnia = 3;
+switch (dzienTygodnia)
+{
+    case 1:
+        Console.WriteLine("Poniedziałek");
+        break;
+    case 2:
+        Console.WriteLine("Wtorek");
+        break;
+    case 3:
+        Console.WriteLine("Środa");
+        break;
+    default:
+        Console.WriteLine("Nieznany dzień tygodnia");
+        break;
+}
+                    </code></pre>
                     <br><br><br>
             </main>
         </div>  
