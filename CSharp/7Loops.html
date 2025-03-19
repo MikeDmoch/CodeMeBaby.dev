@@ -126,6 +126,59 @@ class Program
     }
 }
 </code></pre>
+<p>Wynik:</p>
+<pre><code>
+Iteracja: 0
+Iteracja: 1
+Iteracja: 2
+Iteracja: 3
+Iteracja: 4
+</code></pre>
+<p>Pętla for często stosowana jest do iteracji po tablicach i kolekcjach.</p>
+<h3>Pętla while</h3>
+<p>Pętla while wykonuje blok kodu tak długo, jak długo podany warunek zwraca true. Jest idealna, gdy nie znamy z góry liczby iteracji.</p>
+<p>Składnia:</p>
+<pre class="line-numbers"><code class="language-csharp">
+while (warunek)
+{
+    // Blok kodu
+}
+</code></pre>
+<p>Przykład:</p>
+<pre class="line-numbers"><code class="language-csharp">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int licznik = 0;
+        while (licznik < 5)
+        {
+            Console.WriteLine($"Licznik: {licznik}");
+            licznik++;
+        }
+    }
+}
+</code></pre>
+<p>Wynik:</p>
+<pre><code>
+Licznik: 0
+Licznik: 1
+Licznik: 2
+Licznik: 3
+Licznik: 4
+</code></pre>
+<p>Pętla while przydaje się w sytuacjach, gdzie liczba powtórzeń jest zależna od warunku dynamicznie zmieniającego się w czasie wykonania programu.</p>
+<h3>Pętla do-while</h3>
+<p>Pętla do-while jest odmianą while, ale z tą różnicą, że kod wewnątrz pętli wykona się przynajmniej raz, nawet jeśli warunek od początku nie jest spełniony.</p>
+<p>Składnia:</p>
+<pre class="line-numbers"><code class="language-csharp">
+do
+{
+    // Blok kodu
+} while (warunek);
+</code></pre>
 
                     <br><br><br>
             </main>
