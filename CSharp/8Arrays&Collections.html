@@ -103,18 +103,52 @@
             <h3>Tablice</h3>
             <h4>Definicja i deklaracja</h4>
             <p>Tablica (ang. array) to struktura danych umożliwiająca przechowywanie wielu elementów tego samego 
-            typu w sposób sekwencyjny.</p>
+            typu w sposób sekwencyjny. Indeksowanie tablic zaczyna się od zera, a nie od jedynki.</p>
             <pre><code class="language-csharp">
 int[] liczby = new int[5]; // Tablica z 5 elementami (domyślnie wypełnona zerami)
 int[] liczby2 = {1, 2, 3, 4, 5}; // Inicjalizacja wartościami
+string[] slowa = new string[] {"C#", "Java", "Python"}; // Inna składnia    
             </code></pre>
+            <p>Tablice mogą być jednowymiarowe, wielowymiarowe oraz tablicami nieregularnymi (jagged arrays).</p>
             <h4>Operacje na tablicach</h4>
             <pre><code class="language-csharp">
 int pierwszaLiczba = liczby2[0]; // Pobranie pierwszego elementu
 liczby2[2] = 10; // Zmiana wartości trzeciego elementu
 int dlugoscTablicy = liczby2.Length; // Pobranie długości tablicy
             </code></pre>
+            <p>Iteracja:</p>
+            <pre><code class="language-csharp">
+foreach (var liczba in liczby2) {
+    Console.WriteLine(liczba);
+}           </code></pre>
+            <p>Sortowanie:</p>
+            <pre><code class="language-csharp">
+Array.Sort(liczby2);
             </code></pre>
+            <h3>Kopiowanie:</h3>
+            <pre><code class="language-csharp">
+int[] kopia = new int[liczby2.Length];
+Array.Copy(liczby2, kopia, liczby2.Length);
+            </code></pre>
+            <p>Znalezienie indeksu elementu:</p>
+            <pre><code class="language-csharp">
+int index = Array.IndexOf(liczby2, 3);
+            </code></pre>
+            <p>Odwrócenie tablicy:</p>
+            <pre><code class="language-csharp">
+Array.Reverse(liczby2);
+            </code></pre>
+            <p>Czyszczenie zawartości tablicy:</p>
+            <pre><code class="language-csharp">
+Array.Clear(liczby2, 0, liczby2.Length);
+            </code></pre>
+            <p>Dynamiczne kopiowanie tablicy z rozszerzeniem:</p>
+            <pre><code class="language-csharp"> 
+Array.Resize(ref liczby2, 10);
+            </code></pre>
+            <h3>Kolekcje</h3>
+            <p>Kolekcje w C# to bardziej elastyczne struktury danych niż tablice. Nie mają one statycznie 
+                określonego rozmiaru i często oferują dodatkowe funkcje ułatwiające zarządzanie danymi.</p>
                     <br><br><br>
             </main>
         </div>  
