@@ -102,6 +102,10 @@ nav {
     color: cyan;
 }
 
+.content h3 {
+    margin-top: 20px; /* Dostosuj do własnych potrzeb */
+}
+
 /* Styl dla guzika menu */
 .menu-toggle {
     background: none;
@@ -112,7 +116,9 @@ nav {
     z-index: 1001;
     margin-right: 10px;
 }
-
+ul {
+    margin: 10px;
+}
 /* Wysuwane menu boczne */
 .side-menu {
     position: fixed;
@@ -210,6 +216,7 @@ footer {
     overflow-y: auto; /* Umożliwia przewijanie zawartości */
     background: rgba(255, 255, 255, 0.08);
     padding: 20px;
+    overflow: visible;  
     
     position: fixed; /* Utrzymuje sidebar przy lewej krawędzi */
     top: 0;
@@ -270,6 +277,7 @@ footer {
 }
 
 .sidebar ul li {
+    position: relative; /* Umożliwia poprawne rozszerzenie podświetlenia */
     margin: 5px 0;
 }
 
@@ -277,10 +285,11 @@ footer {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Większy padding dla lepszego efektu */
     display: block;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
+    margin: 2px 12px; /* Zapewnia, że podświetlenie nie będzie ucinane */
 }
 
 .sidebar ul li a:hover {

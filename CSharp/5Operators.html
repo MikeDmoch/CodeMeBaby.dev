@@ -97,7 +97,7 @@
             </div>  
             <p>Operatory w języku C# są kluczowym elementem umożliwiającym manipulację danymi i wykonywanie 
                 operacji na zmiennych. W tym artykule omówimy różne rodzaje operatorów dostępnych w C#, ich 
-                zastosowanie oraz przykłady użycia.</p><br>
+                zastosowanie oraz przykłady użycia.</p>
             <h3>Operatory arytmetyczne</h3>
             <p>Operatory arytmetyczne służą do wykonywania podstawowych operacji matematycznych, takich jak 
                 dodawanie, odejmowanie, mnożenie i dzielenie. Są one wykorzystywane w niemal każdej aplikacji, 
@@ -154,13 +154,13 @@ Console.WriteLine(a % b);  // Wynik: 1
 Console.WriteLine(a++);    // Wynik: 10
 Console.WriteLine(a);      // Wynik: 11
 Console.WriteLine(++a);    // Wynik: 12
-                </code></pre><br>
+                </code></pre>
                 <p>Należy pamiętać, że przy dzieleniu całkowitym wynik również będzie liczbą całkowitą
-                     – reszta zostanie odrzucona. <br>
+                     – reszta zostanie odrzucona. 
                     Operator <code>++</code> w zależności od tego czy jest użyty z lewej czy prawej strony zmiennej (<code>++a</code> 
                     czy <code>a++</code>)
                     ma różne działanie. W obydwu przypadkach wartość jest zwiększona o 1, jednak operator <code>++a</code> (preinkrementacja)
-                    zwraca wartość przed zwiększeniem jej o 1, w odróżnieniu od operatora <code>a++</code> (postikrementacja).</p><br>
+                    zwraca wartość przed zwiększeniem jej o 1, w odróżnieniu od operatora <code>a++</code> (postikrementacja).</p>
                 <h3>Operatory przypisania</h3>
                 <p>Operatory przypisania służą do przypisywania wartości do zmiennych. Oprócz podstawowego 
                     operatora <code>=</code>, istnieją także jego skrócone wersje łączące przypisanie z operacjami 
@@ -208,8 +208,8 @@ Console.WriteLine(++a);    // Wynik: 12
 int x = 5;
 x += 3;  // To samo co x = x + 3;
 Console.WriteLine(x);  // Wynik: 8
-                    </code></pre><br>
-                    <p>Dzięki operatorom takim jak <code>+=</code> kod staje się bardziej czytelny i krótszy.</p><br>
+                    </code></pre>
+                    <p>Dzięki operatorom takim jak <code>+=</code> kod staje się bardziej czytelny i krótszy.</p>
                     <h3>Operatory porównania</h3>
                     <p>Operatory porównania pozwalają na sprawdzenie zależności pomiędzy wartościami. 
                         Wynik każdej operacji porównania to wartość logiczna (<code>true</code> lub <code>false</code>).</p>
@@ -257,7 +257,7 @@ int a = 10, b = 20;
 Console.WriteLine(a < b);  // Wynik: True
                     </code></pre>
                     <p>Operatory porównania są często stosowani w instrukcjach warunkowych if 
-                        oraz pętlach sterujących. Te tematy będą poruszone w dalszej części kursu.</p><br>
+                        oraz pętlach sterujących. Te tematy będą poruszone w dalszej części kursu.</p>
                     <h3>Operatory logiczne</h3>
                     Operatory logiczne są używane do operacji na wartościach <code>bool</code> (<code>true</code> - <code>false</code>), a 
                     także w warunkach sterujących programem.
@@ -290,9 +290,9 @@ bool x = true, y = false;
 Console.WriteLine(x && y);  // Wynik: false
 Console.WriteLine(x || y);  // Wynik: true
 Console.WriteLine(!x);      // Wynik: false
-                    </code></pre><br>
+                    </code></pre>
                     <p>Operator <code>&&</code> zwraca true tylko wtedy, gdy oba warunki są spełnione. Operator <code>||</code> zwraca 
-                        true, gdy przynajmniej jeden z warunków jest spełniony. Operator ! neguje wartość logiczną.</p><br>
+                        true, gdy przynajmniej jeden z warunków jest spełniony. Operator ! neguje wartość logiczną.</p>
                     <h3>Operator warunkowy (trójargumentowy)</h3>
                     <p>Operator warunkowy <code>?:</code> działa jak skrócona forma instrukcji if-else, dzięki czemu kod jest bardziej czytelny.
                         <br>Przykład:</p>
@@ -300,11 +300,11 @@ Console.WriteLine(!x);      // Wynik: false
 int liczba = 10;
 string wynik = (liczba > 0) ? "Dodatnia" : "Nie dodatnia";
 Console.WriteLine(wynik);  // Wynik: Dodatnia
-                    </code></pre><br>
+                    </code></pre>
                     <p>Ten operator przydaje się do krótkich warunków. Bezpośrednio za znakiem ? umieszczamy
                         wartość zwracaną jeśli warunek jest spełniony, natomiast za znakiem : wartość zwracaną gdy
                         warunek nie jest spełniony.
-                    </p><br>
+                    </p>
                     <h3>Operatory is oraz as</h3>
                     <p>Operator is sprawdza, czy obiekt jest określonego typu, natomiast as dokonuje rzutowania 
                         obiektu na dany typ, jeśli jest to możliwe.</p>
@@ -315,13 +315,13 @@ if (obj is string)
 {
     Console.WriteLine("Obiekt jest stringiem");
 }
-                    </code></pre><br>
+                    </code></pre>
                     <pre><code class="language-csharp">
 object obj = "Hello";
 string str = obj as string;
 Console.WriteLine(str ?? "Nie jest stringiem");
-                    </code></pre><br>
-                    <p>Jeśli się nie udało rzutować operator as zwraca <code>null</code>.</p><br>   
+                    </code></pre>
+                    <p>Jeśli się nie udało rzutować operator as zwraca <code>null</code>.</p>   
                     <h3>Operatory ?? oraz ??=</h3>
                     <p>Operator <code>??</code> zwraca wartość lewą, jeśli nie jest <code>null</code>, w przeciwnym razie 
                         zwraca prawą stronę. <br>Przykład:</p>
@@ -334,7 +334,7 @@ Console.WriteLine(tekst ?? "Domyślny tekst");
 string tekst = null;
 tekst ??= "Nowa wartość";
 Console.WriteLine(tekst);
-                    </code></pre><br>
+                    </code></pre>
                     <h3>Operatory sizeof oraz typeof</h3>
                     <p>Operator <code>sizeof</code> zwraca rozmiar w bajtach danego typu. <br>Przykład:</p>
                     <pre><code class="language-csharp">
@@ -344,7 +344,7 @@ Console.WriteLine(sizeof(double));  // Wynik: 8
                     <p>Operator <code>typeof</code> zwraca typ zmiennej. Przykład:</p>
                     <pre><code class="language-csharp">
 Console.WriteLine(typeof(int));  // Wynik: System.Int32
-                    </code></pre><br>
+                    </code></pre>
                     <h3>Operator new</h3>
                     <p>Operator <code>new</code> tworzy nowe obiekty. Pozwala na alokację pamięci 
                         dla nowej instancji typu i wywołuje jego konstruktor. Zostanie omówiony dalej w części Klasy i 
@@ -355,7 +355,7 @@ Osoba osoba = new Osoba();
 osoba.Imie = "Jan";
 Console.WriteLine(osoba.Imie);
                     </code></pre>
-                    <p>Bez użycia new niemożliwe byłoby tworzenie nowych instancji obiektów klas.</p><br>
+                    <p>Bez użycia new niemożliwe byłoby tworzenie nowych instancji obiektów klas.</p>
                     <h3>Operatory bitowe</h3>
                     <p>Operatory bitowe działają na poziomie bitów i są przydatne w niskopoziomowych operacjach, 
                         takich jak manipulacja flagami, kompresja danych czy optymalizacje.</p>
@@ -408,7 +408,7 @@ Console.WriteLine(a ^ b);  // Wynik: 6 (0110 w binarnym)
 Console.WriteLine(~a);     // Wynik: -6 (w binarnym: 1010, czyli negacja bitowa)
 Console.WriteLine(a << 1); // Wynik: 10 (1010 w binarnym, przesunięcie w lewo)
 Console.WriteLine(a >> 1); // Wynik: 2 (0010 w binarnym, przesunięcie w prawo)
-                    </code></pre><br>
+                    </code></pre>
                     <h3>Podsumowanie</h3>
                     <p>Język C# oferuje szeroką gamę operatorów, które umożliwiają efektywne zarządzanie danymi.  
                         Znajomość ich działania jest wiedzą podstawową programisty, gdyż wpływają one na 
