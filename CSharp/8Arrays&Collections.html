@@ -125,7 +125,7 @@ foreach (var liczba in liczby2) {
             <pre><code class="language-csharp">
 Array.Sort(liczby2);
             </code></pre>
-            <h3>Kopiowanie:</h3>
+            <p>Kopiowanie:</p>
             <pre><code class="language-csharp">
 int[] kopia = new int[liczby2.Length];
 Array.Copy(liczby2, kopia, liczby2.Length);
@@ -149,6 +149,96 @@ Array.Resize(ref liczby2, 10);
             <h3>Kolekcje</h3>
             <p>Kolekcje w C# to bardziej elastyczne struktury danych niż tablice. Nie mają one statycznie 
                 określonego rozmiaru i często oferują dodatkowe funkcje ułatwiające zarządzanie danymi.</p>
+            <h4>Rodzaje kolekcji</h4>
+            <p>Podstawowe typy:</p>
+            <ul>
+                <li>List<T></li>
+                <li>Dictionary<TKey, TValue></li>
+                <li>Queue<T></li>
+                <li>Stack<T></li>
+                <li>HashSet<T></li>
+            </ul>
+            <h4>List – Najczęściej używana kolekcja</h4>
+            <p>List to dynamiczna kolekcja elementów tego samego typu. Możemy dodawać, usuwać, sortować
+                 oraz wyszukiwać elementy w kolekcji.</p>
+            <pre><code class="language-csharp">
+List<int> liczby = new List<int> {1, 2, 3};
+liczby.Add(4);
+liczby.Remove(2);
+Console.WriteLine(liczby.Count);
+liczby.Sort();
+liczby.ForEach(Console.WriteLine);
+liczby.Clear();
+            </code></pre>
+            <p>List pozwala na dynamiczne dodawanie i usuwanie elementów, co czyni ją bardziej elastyczną niż tablice.</p>
+            <h4>Dictionary – Kolekcja klucz-wartość</h4>
+            <p>Słownik pozwala na szybkie wyszukiwanie wartości na podstawie klucza:</p>
+            <pre><code class="language-csharp">
+// Tworzenie słownika, który przechowuje oceny studentów
+Dictionary<string, int> oceny = new Dictionary<string, int>();
+
+// Dodanie oceny dla Adama
+oceny["Adam"] = 70;
+
+// Dodanie oceny dla Ewy
+oceny.Add("Ewa", 95);
+
+// Wyświetlenie oceny Adama
+Console.WriteLine(oceny["Adam"]);
+</code></pre>
+            <h4>Queue – Kolejka</h4>
+            <p>Kolejka to kolekcja FIFO (First In, First Out), w której elementy są pobierane w kolejności, w jakiej zostały dodane.</p>
+            <pre><code class="language-csharp">
+// Tworzenie kolejki znaków
+Queue<string> kolejka = new Queue<string>();
+
+// Dodanie elementów do kolejki
+kolejka.Enqueue("A");
+kolejka.Enqueue("B");
+
+// Usunięcie pierwszego elementu z kolejki
+kolejka.Dequeue();
+</code></pre>
+            <h4>Stack – Stos</h4>
+            <p>Stos to kolekcja LIFO (Last In, First Out), w której ostatni dodany element jest pierwszym, który zostanie usunięty. 
+    Stos jest często używany w algorytmach, takich jak przetwarzanie wyrażeń matematycznych, odwracanie kolejności elementów 
+    lub implementacja rekurencji.</p>
+<pre><code class="language-csharp">
+// Tworzenie stosu liczb całkowitych
+Stack<int> stos = new Stack<int>();
+
+// Dodanie elementów na stos
+stos.Push(1);
+stos.Push(2);
+
+// Usunięcie ostatniego elementu ze stosu
+stos.Pop();
+</code></pre>
+            <h4>HashSet – Zbiór unikalnych wartości</h4>
+            <p>HashSet to kolekcja, która przechowuje unikalne elementy i pozwala na szybkie operacje dodawania, 
+                usuwania oraz sprawdzania, czy element już istnieje.</p>
+            <pre><code class="language-csharp">
+// Tworzenie HashSet z unikalnymi liczbami
+HashSet<int> liczby = new HashSet<int> {1, 2, 3, 4};
+
+// Dodanie nowego elementu
+liczby.Add(5);
+
+// Próba dodania duplikatu (nie zostanie dodany)
+liczby.Add(2);
+
+// Sprawdzenie, czy element istnieje w zbiorze
+Console.WriteLine(liczby.Contains(3)); // True
+
+// Usunięcie elementu ze zbioru
+liczby.Remove(4);
+</code></pre>
+            <p>Operacje Add, Remove i Contains działają w czasie O(1).</p>
+            <h3>Podsumowanie</h3>
+            <p>Tablice oferują wydajność i prostotę, ale są ograniczone sztywnym rozmiarem. Kolekcje 
+                zapewniają większą elastyczność i dodatkowe funkcjonalności, ale mogą być mniej wydajne 
+                pod względem pamięci i wydajności operacji. Wybór między nimi zależy od konkretnego 
+                scenariusza programistycznego.
                     <br><br><br>
             </main>
         </div>  
