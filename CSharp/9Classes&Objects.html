@@ -107,8 +107,37 @@
                 tworzymy obiekty. W klasie możemy zdefiniować pola, właściwości, metody, konstruktory, destruktory
                 i wiele innych elementów. Klasa jest abstrakcyjnym pojęciem, które nie zajmuje miejsca w pamięci
                 komputera. Obiekt natomiast jest instancją klasy, która zajmuje miejsce w pamięci i przechowuje
-                konkretne dane.</p>
-                    <br><br><br>
+                konkretne dane.</p> <br>
+                <p>Klasa w C# jest typem referencyjnym (ang. reference type), co oznacza, że obiekty przechowywane są na stercie (ang. heap), a zmienne przechowują referencję do tych obiektów.</p>
+                <p>Składowe klasy:</p>
+                <h4>Pola</h4>
+                <p>Pola to zmienne zdefiniowane wewnątrz klasy, które przechowują dane. Mogą być publiczne lub prywatne.</p>
+                <p>Przykład klasy:</p>
+                <pre><code class="language-csharp">
+public class Osoba
+{
+    // Właściwość przechowująca imię osoby
+    public string Imie { get; set; }
+
+    // Właściwość przechowująca wiek osoby
+    public int Wiek { get; set; }
+
+    // Konstruktor klasy Osoba, który inicjalizuje pola Imie i Wiek
+    public Osoba(string imie, int wiek)
+    {
+        Imie = imie; // Przypisanie wartości do właściwości Imie
+        Wiek = wiek; // Przypisanie wartości do właściwości Wiek
+    }
+
+    // Metoda, która wyświetla informacje o osobie
+    public void PrzedstawSie()
+    {
+        Console.WriteLine($"Cześć, mam na imię {Imie} i mam {Wiek} lat.");
+    }
+}
+</code></pre>
+                
+                <br><br><br>
             </main>
         </div>  
 
