@@ -207,7 +207,47 @@ public class Uczen
                     <pre><code class="language-csharp">
 Osoba osoba = new Osoba { Imie = "Jan" };
                     </code></pre>              
-                    <p>2. Dla klas statycznych (nie mogą mieć konstruktorów instancyjnych)</p>      
+                    <p>2. Dla klas statycznych (nie mogą mieć konstruktorów instancyjnych)</p>   
+                    <h3>Destruktory</h3>
+                    <p>Destruktor (znany również jako finalizator) to metoda wywoływana automatycznie tuż przed 
+                        usunięciem obiektu przez garbage collector. Służy do zwalniania zasobów niezarządzanych 
+                        (np. uchwyty do plików, połączenia sieciowe).</p>   
+                    <p>Destruktor nie przyjmuje żadnych argumentów i nie może być przeciążany. Jego składnia
+                        przypomina konstruktor, ale z użyciem tyldy (~) przed nazwą klasy.</p>
+                    <pre><code class="language-csharp">
+class Plik
+{
+    ~Plik()
+    {
+        // kod sprzątający
+    }
+}                   </code></pre>
+                    <p>Warto jednak pamiętać, że destruktory są rzadko używane w C#, ponieważ garbage collector 
+                        automatycznie zarządza pamięcią. W większości przypadków lepiej jest używać wzorca 
+                        IDisposable i metody Dispose() do zarządzania zasobami.</p>
+                    <h3>Przykład użycia destruktora</h3>
+                    <p>W poniższym przykładzie mamy klasę <code>Plik</code>, która otwiera plik w konstruktorze 
+                        i zamyka go w destruktorze:</p>
+                    <pre><code class="language-csharp">
+class Plik
+{
+    private FileStream _plik;
+    public Plik(string sciezka)
+    {
+        _plik = new FileStream(sciezka, FileMode.Open);
+    }
+    ~Plik()
+    {
+        _plik.Close(); // Zamyka plik
+    }
+}                   </code></pre>
+                    <h3>Podsumowanie</h3>
+                    <p>Konstruktory to fundament tworzenia i inicjalizacji obiektów. Dzięki nim możesz 
+                        kontrolować, jak wygląda stan obiektu już na starcie. Warto zrozumieć ich typy, możliwości 
+                        przeciążania oraz zastosowania this, by pisać bardziej elastyczny i czytelny kod.</p>
+                    <p>Destruktory, choć rzadziej używane, są istotne w kontekście zarządzania zasobami.
+                        Pamiętaj, że w większości przypadków lepiej jest korzystać z wzorca IDisposable i 
+                        metody Dispose() do zarządzania zasobami.</p>
                     <br><br><br>
             </main>
         </div>  
