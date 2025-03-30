@@ -165,7 +165,41 @@ public class Licznik
                     <p>W tym przypadku, kiedy klasa <code>Licznik</code> zostanie załadowana, <code>Wartosc</code> 
                         zostanie ustawiona na 100.</p>
                     <h4>Konstruktor kopiujący</h4>
-                        
+                    <p>C# nie ma wbudowanego konstruktora kopiującego, ale możesz go zaimplementować samodzielnie:</p>
+                    <pre><code class="language-csharp">
+public class Samochod
+{
+    public string Marka;
+
+    public Samochod(Samochod inny)
+    {
+        Marka = inny.Marka;
+    }
+}                   </code></pre>
+                    <p>W tym przypadku, kiedy tworzysz nowy obiekt <code>Samochod</code>, możesz skopiować dane z 
+                        innego obiektu tej samej klasy.</p>
+                    <p>Użycie:</p>
+                    <pre><code class="language-csharp">
+Samochod samochod1 = new Samochod();
+samochod1.Marka = "Toyota";
+Samochod samochod2 = new Samochod(samochod1);
+Console.WriteLine(samochod2.Marka); // Wypisze "Toyota"                   </code></pre>
+                    <h4>Słowo kluczowe this</h4>
+                    <p>Możesz użyć słowa kluczowego <code>this</code>, aby odwołać się do bieżącego obiektu w 
+                        konstruktorze. Jest to przydatne, gdy masz wiele konstruktorów i chcesz przekazać 
+                        argumenty do innego konstruktora.</p>
+                    <pre><code class="language-csharp">
+public class Uczen
+{
+    public string Imie;
+    public int Wiek;
+    public Uczen(string imie) : this(imie, 18) { } // Przekazuje do innego konstruktora
+    public Uczen(string imie, int wiek)
+    {
+        Imie = imie;
+        Wiek = wiek;
+    }
+}                   </code></pre>                        
                     <br><br><br>
             </main>
         </div>  
