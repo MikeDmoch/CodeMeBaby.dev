@@ -74,7 +74,7 @@
                     <li><a href="7Loops.html">Pętle</a></li>
                     <li><a href="8Arrays&Collections.html">Kolekcje</a></li>
                     <li><a href="9Classes&Objects.html">Klasy i Struktury</a></li>
-                    <li><a href="10Constructors&Destructwors.html">Konstruktory</a></li>
+                    <li><a href="10Constructors&Destructors.html">Konstruktory</a></li>
                     <li><a href="11Properties.html">Właściwości</a></li>
                     <li><a href="12AccessModifiers.html">Modyfikatory Dostępu</a></li>
                     <li><a href="13Inheritance&Polimorphism.html">Dziedziczenie</a></li>
@@ -199,7 +199,15 @@ public class Uczen
         Imie = imie;
         Wiek = wiek;
     }
-}                   </code></pre>                        
+}                   </code></pre>    
+                    <p>W tym przypadku, jeśli stworzysz nowego ucznia tylko z imieniem, wiek zostanie domyślnie 
+                        ustawiony na 18.</p>
+                    <h4>Kiedy konstruktor może nie być potrzebny?</h4>
+                    <p>1. Gdy używasz inicjalizatorów obiektów</p>
+                    <pre><code class="language-csharp">
+Osoba osoba = new Osoba { Imie = "Jan" };
+                    </code></pre>              
+                    <p>2. Dla klas statycznych (nie mogą mieć konstruktorów instancyjnych)</p>      
                     <br><br><br>
             </main>
         </div>  
