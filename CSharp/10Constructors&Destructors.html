@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeMeBaby.dev Blog</title>
+        <meta property="og:title" content="CodeMeBaby">
+        <meta property="og:description" content="Najlepsze kursy programowania - HTML, CSS, JavaScript, C#, Python i wiele więcej!">
+        <meta property="og:image" content="https://codemebaby.dev.com/og-image.jpg">
+        <meta property="og:url" content="https://codemebaby.dev">
+        <meta property="og:type" content="website">
+        
+        <link rel="stylesheet" href="/CSharp/CSharpStyle.css">
+
+        <!-- Prism.js dla syntax highlighting -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <!-- Import czcionki Poppins z Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Import czcionki Fira Code z Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <script defer src="/script.js"></script>
+        <style>
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .logo:hover {
+                transform: scale(1.05) rotate(-2deg);
+                color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="/home.html" style="text-decoration: none; color: inherit;">CodeMeBaby.dev</a></div>
+            <nav>
+                <button class="menu-toggle">☰</button>
+            </nav>
+        </header>
+
+        <!-- Wysuwane menu -->
+        <div class="side-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="#">Strona Główna</a></li>
+                <li><a href="#">Języki</a></li>
+                <li><a href="#">Wzorce Projektowe</a></li>
+                <li><a href="#">Artykuły Techniczne</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Kurs C#</h2>
+                <ul>
+                    <li><a href="1Basics.html">Wprowadzenie</a></li>
+                    <li><a href="2EnvironmentInstallation.html">Instalacja Środowiska</a></li>
+                    <li><a href="3FirstCode.html">Pierwszy kod</a></li>
+                    <li><a href="4Variables.html">Zmienne</a></li>
+                    <li><a href="5Operators.html">Operatory</a></li>
+                    <li><a href="6ConditionalStatements.html">Instrukcje Warunkowe</a></li>
+                    <li><a href="7Loops.html">Pętle</a></li>
+                    <li><a href="8Arrays&Collections.html">Kolekcje</a></li>
+                    <li><a href="9Classes&Objects.html">Klasy i Struktury</a></li>
+                    <li><a href="10Constructors&Destructwors.html">Konstruktory</a></li>
+                    <li><a href="11Properties.html">Właściwości</a></li>
+                    <li><a href="12AccessModifiers.html">Modyfikatory Dostępu</a></li>
+                    <li><a href="13Inheritance&Polimorphism.html">Dziedziczenie</a></li>
+                    <li><a href="14Interfaces&AbstractClasses.html">Interfejsy</a></li>
+                    <li><a href="15StaticConstReadonly.html">Statyczność</a></li>
+                    <li><a href="16Methods&Overloading.html">Metody</a></li>
+                    <li><a href="17Delegates&Events.html">Delegaty i Zdarzenia</a></li>
+                    <li><a href="18Lambda.html">Wyrażenia Lambda</a></li>
+                    <li><a href="19Exceptions.html">Wyjątki</a></li>
+                    <li><a href="20Files.html">Obsługa Plików</a></li>
+                    <li><a href="21Serialization.html">Serializacja</a></li>
+                    <li><a href="22Multithreading&Task.html">Wielowątkowość</a></li>
+                    <li><a href="23Async&Await.html">Asynchroniczność</a></li>
+                    <li><a href="24LINQ.html">LINQ</a></li>
+                </ul>
+            </aside>
+
+            <main class="content"><div class="header-container">
+                <h1>Konstruktory i destruktor – Kompleksowy Przewodnik</h1>
+            </div>
+            <p>Kiedy tworzysz nowy obiekt w C#, potrzebujesz sposobu na jego inicjalizację. Tu właśnie na scenę 
+            wkraczają konstruktory — specjalne metody, które są wywoływane automatycznie podczas tworzenia 
+            obiektu.</p>
+            <h3>Czym jest konstruktor?</h3>
+            <p>Konstruktor to metoda, która ma taką samą nazwę jak klasa i nie posiada typu zwracanego 
+                (nawet void). Jej zadaniem jest przygotowanie nowej instancji obiektu do użycia.</p>
+            <pre><code class="language-csharp">
+public class Osoba
+{
+    public string Imie;
+
+    // Konstruktor
+    public Osoba(string imie)
+    {
+        Imie = imie;
+    }
+}               </code></pre>
+            <p>W powyższym przykładzie mamy klasę <code>Osoba</code>, która ma konstruktor przyjmujący jeden
+                argument — imię. Kiedy tworzysz nową instancję tej klasy, musisz podać imię:</p>
+                <pre><code class="language-csharp">
+Osoba osoba = new Osoba("Jan");
+Console.WriteLine(osoba.Imie); // Wypisze "Jan"               </code></pre>
+                    <h3>Typy konstruktorów</h3>
+                    <h4>Konstruktor domyślny</h4>
+                    <p>To konstruktor bez parametrów. Jeśli nie zdefiniujesz żadnego konstruktora, automatycznie zostanie 
+                        utworzony domyślny.</p>
+                    <pre><code class="language-csharp">
+public class Produkt
+{
+    public string Nazwa;
+
+    // Konstruktor domyślny
+    public Produkt()
+    {
+        Nazwa = "Nieznana";
+    }
+}                   </code></pre>
+                    <p>W tym przypadku, jeśli nie podasz nazwy produktu, domyślnie zostanie ustawiona na "Nieznana".</p>
+                    <h3>Konstruktor z parametrami</h3>
+                    <p>Jak już wspomniano, konstruktor może przyjmować parametry, co pozwala na bardziej elastyczną 
+                        inicjalizację obiektów.</p>
+                    <pre><code class="language-csharp">
+public Produkt(string nazwa)
+{
+    Nazwa = nazwa;
+}
+                    </code></pre>
+                    <h4>Przeciążanie konstruktorów</h4>
+                    <p>Możesz mieć wiele konstruktorów (o tej samej nazwie) ale z różnymi parametrami.</p>
+                    <pre><code class="language-csharp">
+public Produkt() { Nazwa = "Nieznana"; }
+public Produkt(string nazwa) { Nazwa = nazwa; }
+public Produkt(string nazwa, double cena) { Nazwa = nazwa; Cena = cena; }
+                    </code></pre>
+                    <h4>Konstruktor statyczny</h4>
+                    <p>Jest wywoływany tylko raz, zanim zostanie użyta pierwsza instancja lub członek statyczny. 
+                        Służy do inicjalizacji statycznych danych.</p>
+                    <pre><code class="language-csharp">
+public class Licznik
+{
+    public static int Wartosc;
+
+    static Licznik()
+    {
+        Wartosc = 100;
+    }
+}                   </code></pre>
+                    <p>W tym przypadku, kiedy klasa <code>Licznik</code> zostanie załadowana, <code>Wartosc</code> 
+                        zostanie ustawiona na 100.</p>
+                    <h4>Konstruktor kopiujący</h4>
+                        
+                    <br><br><br>
+            </main>
+        </div>  
+
+        <footer>
+            <p>:)</p>
+        </footer>
+
+        <script>
+            console.log(`
+              /$$$$$$                  /$$          
+             /$$__  $$                | $$          
+            | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$ 
+            | $$       /$$__  $$ /$$__  $$ /$$__  $$
+            | $$      | $$  \ $$| $$  | $$| $$$$$$$$
+            | $$    $$| $$  | $$| $$  | $$| $$_____/
+            |  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+            \______/  \______/  \_______/ \_______/
+
+                😃 Witaj, deweloperze! Miłego kodowania! 🚀
+            `);
+        </script>
+    </body>
+    </html>
