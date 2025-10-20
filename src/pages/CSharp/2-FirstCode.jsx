@@ -13,7 +13,7 @@ const code3 = "class Program";
 const code4 = "static void Main()";
 const code5 = 'Console.WriteLine("Witaj, świecie!");';
 
-export default function FirstCode() {
+export default function CSharp_FirstCode() {
   return (
     <main class="content">
       <div class="header-container">

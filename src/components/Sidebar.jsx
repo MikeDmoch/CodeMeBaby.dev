@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="pt-3 bg-zinc-800 rounded">
+    <div className="bg-zinc-800 rounded h-fit">
       {/* <img src={logo} alt="Logo" /> */}
       <ul>
-        <li className="px-4 py-2">
+        <li className="px-4 py-2 border-b border-zinc-700">
           <Link to="/JavaScript" className=" text-gray-100">
             JavaScript
           </Link>
         </li>
-        <li className="px-4 py-2">
+        <li className="px-4 py-2 border-b border-zinc-700">
           <Link to="/HTML&CSS" className="text-gray-100">
             HTML & CSS
           </Link>
         </li>
-        <li className="px-4 py-2">
+        <li className="px-4 py-2 border-b border-zinc-700">
           <Link to="/React" className="text-gray-100">
             React
           </Link>
         </li>
-        <li className="px-4 py-2">
+        <li className="px-4 py-2 border-b border-zinc-700">
           <Link to="/CSharp" className="text-gray-100">
             CSharp
           </Link>

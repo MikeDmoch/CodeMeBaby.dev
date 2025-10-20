@@ -1,7 +1,7 @@
-export default function Basics() {
+export default function CSharp_Basics() {
   return (
-    <main className="content">
-      <div class="header-container">
+    <main>
+      <div>
         <h1>Wprowadzenie do pisania kodu w języku C#</h1>
       </div>
       <h3>Historia</h3>
@@ -64,7 +64,7 @@ export default function Basics() {
           programistów.
         </li>
         <li>
-          <strong>Łatwość integracji z chmurą</strong>– świetna współpraca z
+          <strong>Łatwość integracji z chmurą</strong> – świetna współpraca z
           Microsoft Azure umożliwia szybkie wdrażanie aplikacji chmurowych.
         </li>
       </ul>
@@ -86,89 +86,71 @@ export default function Basics() {
         różnych typów projektów.
       </p>
       <h3>Porównanie Visual Studio i Visual Studio Code</h3>
-      <table>
-        <tr>
-          <th>Cecha</th>
-          <th>Visual Studio (VS)</th>
-          <th>Visual Studio Code (VS Code)</th>
-        </tr>
-        <tr>
-          <td>
-            <b>Typ narzędzia</b>
-          </td>
-          <td>Pełne IDE</td>
-          <td>Lekki edytor kodu</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Producent</b>
-          </td>
-          <td>Microsoft</td>
-          <td>Microsoft</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Zastosowanie</b>
-          </td>
-          <td>Tworzenie aplikacji w .NET, C++, Python, Java</td>
-          <td>Uniwersalny edytor dla wielu języków</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Waga i wydajność</b>
-          </td>
-          <td>Cięższe, wymaga więcej zasobów</td>
-          <td>Lekkie i szybkie</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Obsługiwane języki</b>
-          </td>
-          <td>Głównie .NET (C#, VB, F#), C++, Python</td>
-          <td>Wiele języków (JavaScript, Python, Go, itp.)</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Obsługa projektów</b>
-          </td>
-          <td>Rozbudowane zarządzanie projektami</td>
-          <td>Prostsze, opiera się na folderach</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Debugowanie</b>
-          </td>
-          <td>Wbudowany debugger dla .NET i innych języków</td>
-          <td>Debugger wymaga rozszerzeń</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Wsparcie dla Git</b>
-          </td>
-          <td>Wbudowana obsługa Git</td>
-          <td>Wbudowana obsługa Git</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Rozszerzalność</b>
-          </td>
-          <td>Pluginy, ale mniej niż w VS Code</td>
-          <td>Tysiące rozszerzeń w Marketplace</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Cena</b>
-          </td>
-          <td>Wersja Community darmowa, ale wersje Pro i Enterprise płatne</td>
-          <td>Całkowicie darmowy</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Platformy</b>
-          </td>
-          <td>Windows</td>
-          <td>Windows, Mac, Linux</td>
-        </tr>
+      <table className="min-w-full">
+        <thead className="flex justify-center">
+          <tr>
+            <th>Cecha</th>
+            <th>Visual Studio (VS)</th>
+            <th>Visual Studio Code (VS Code)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Typ narzędzia</td>
+            <td>Pełne IDE</td>
+            <td>Lekki edytor kodu</td>
+          </tr>
+          <tr>
+            <td>Producent</td>
+            <td>Microsoft</td>
+            <td>Microsoft</td>
+          </tr>
+          <tr>
+            <td>Zastosowanie</td>
+            <td>Tworzenie aplikacji w .NET, C++, Python, Java</td>
+            <td>Uniwersalny edytor dla wielu języków</td>
+          </tr>
+          <tr>
+            <td>Waga i wydajność</td>
+            <td>Cięższe, wymaga więcej zasobów</td>
+            <td>Lekkie i szybkie</td>
+          </tr>
+          <tr>
+            <td>Obsługiwane języki</td>
+            <td>Głównie .NET (C#, VB, F#), C++, Python</td>
+            <td>Wiele języków (JavaScript, Python, Go, itp.)</td>
+          </tr>
+          <tr>
+            <td>Obsługa projektów</td>
+            <td>Rozbudowane zarządzanie projektami</td>
+            <td>Prostsze, opiera się na folderach</td>
+          </tr>
+          <tr>
+            <td>Debugowanie</td>
+            <td>Wbudowany debugger dla .NET i innych języków</td>
+            <td>Debugger wymaga rozszerzeń</td>
+          </tr>
+          <tr>
+            <td>Wsparcie dla Git</td>
+            <td>Wbudowana obsługa Git</td>
+            <td>Wbudowana obsługa Git</td>
+          </tr>
+          <tr>
+            <td>Rozszerzalność</td>
+            <td>Pluginy, ale mniej niż w VS Code</td>
+            <td>Tysiące rozszerzeń w Marketplace</td>
+          </tr>
+          <tr>
+            <td>Cena</td>
+            <td>Community darmowa, ale wersje Pro i Enterprise płatne</td>
+            <td>Całkowicie darmowy</td>
+          </tr>
+          <tr>
+            <td>Platformy</td>
+            <td>Windows</td>
+            <td>Windows, Mac, Linux</td>
+          </tr>
+        </tbody>
       </table>
       <p>Wybór między oprogramowaniami zależy od indywidualnych preferencji.</p>
     </main>

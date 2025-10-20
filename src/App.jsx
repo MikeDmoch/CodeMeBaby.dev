@@ -5,8 +5,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
-import Main from "./components/Main.jsx";
-import Services from "./pages/Services.jsx";
+import CSharp from "./pages/CSharp.jsx";
 import "./index.css";
 
 export default function App() {
@@ -16,17 +15,17 @@ export default function App() {
     <BrowserRouter>
       <div className="min-h-screen flex flex-col bg-zinc-900 text-zinc-200">
         <Header onToggle={() => setIsSidebarOpen((prev) => !prev)} />
-        <div className="p-4 flex flex-1">
+        <div className="p-10 flex flex-1">
           <Sidebar
             open={isSidebarOpen}
             onClose={() => setIsSidebarOpen(false)}
           />
 
-          <div className="pt-2 flex-1">
+          <div className="pl-10 flex-1">
             <Routes>
               <Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/home" element={<Home />} />
-              <Route path="/services" element={<Services />} />
+              <Route path="/CSharp/*" element={<CSharp />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Navigate to="/home" replace />} />
             </Routes>
