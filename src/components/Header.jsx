@@ -24,6 +24,8 @@ export default function Header() {
   //       </nav>
   //     </header>
   return (
-    <header className="bg-zinc-800 flex text-gray-100 p-2">CodeMeBaby</header>
+    <header className="bg-zinc-800 flex text-gray-100 p-2">
+      <p className=" hover:rotate-3 transition">CodeMeBaby.dev</p>
+    </header>
   );
 }
