@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-zinc-900 text-zinc-200">
         <Header onToggle={() => setIsSidebarOpen((prev) => !prev)} />
         <div className="p-4 flex flex-1">
           <Sidebar
