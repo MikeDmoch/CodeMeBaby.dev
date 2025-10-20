@@ -23,5 +23,7 @@ export default function Header() {
   //         </ul>
   //       </nav>
   //     </header>
-  return <header className="bg-zinc-800 flex text-gray-100">CodeMeBaby</header>;
+  return (
+    <header className="bg-zinc-800 flex text-gray-100 p-2">CodeMeBaby</header>
+  );
 }

@@ -7,18 +7,28 @@ function Sidebar() {
       {/* <img src={logo} alt="Logo" /> */}
       <ul>
         <li className="px-4 py-2">
-          <Link to="/home" className=" text-gray-100">
-            O mnie
+          <Link to="/JavaScript" className=" text-gray-100">
+            JavaScript
           </Link>
         </li>
         <li className="px-4 py-2">
-          <Link to="/services" className="text-gray-100">
-            Zakres usług
+          <Link to="/HTML&CSS" className="text-gray-100">
+            HTML & CSS
           </Link>
         </li>
         <li className="px-4 py-2">
-          <Link to="/contact" className="text-gray-100">
-            Kontakt
+          <Link to="/React" className="text-gray-100">
+            React
+          </Link>
+        </li>
+        <li className="px-4 py-2">
+          <Link to="/CSharp" className="text-gray-100">
+            CSharp
+          </Link>
+        </li>
+        <li className="px-4 py-2">
+          <Link to="/CPLusPlus" className="text-gray-100">
+            C++
           </Link>
         </li>
       </ul>
