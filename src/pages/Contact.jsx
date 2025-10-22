@@ -1,8 +1,9 @@
 export default function Contact() {
   return (
     <div>
-      <h1>About Us</h1>
-      <p>This is the about page of our website.</p>
+      <h1>Kontakt</h1>
+      <p>Autor: Michał Dmoch</p>
+      <p>Email: m.dmoch.biz@gmail.com</p>
     </div>
   );
 }

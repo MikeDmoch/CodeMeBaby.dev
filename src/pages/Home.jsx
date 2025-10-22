@@ -1,8 +1,11 @@
 export default function Home() {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the home page of our website.</p>
+      <h1>Witaj na portalu CodeMeBaby.dev</h1>
+      <p>
+        Możesz tutaj odkrywać niesamowite samouczki i zasoby dotyczące
+        programowania i tworzenia stron internetowych.
+      </p>
     </div>
   );
 }

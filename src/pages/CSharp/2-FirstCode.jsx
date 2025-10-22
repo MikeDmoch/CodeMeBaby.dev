@@ -15,8 +15,8 @@ const code5 = 'Console.WriteLine("Witaj, świecie!");';
 
 export default function CSharp_FirstCode() {
   return (
-    <main class="content">
-      <div class="header-container">
+    <main>
+      <div>
         <h1>Pierwszy program w C#</h1>
       </div>
       <p>
