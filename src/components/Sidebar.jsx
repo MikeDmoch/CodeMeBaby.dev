@@ -27,7 +27,7 @@ function Sidebar() {
           </Link>
         </li>
         <li className="px-4 py-2">
-          <Link to="/CPLusPlus" className="text-gray-100">
+          <Link to="/CPlusPlus" className="text-gray-100">
             C++
           </Link>
         </li>

@@ -6,6 +6,10 @@ import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
 import CSharp from "./pages/CSharp.jsx";
+import CPlusPlus from "./pages/CPlusPlus.jsx";
+import JavaScript from "./pages/JavaScript.jsx";
+import HTMLCSS from "./pages/HTML&CSS.jsx";
+import React from "./pages/React.jsx";
 import "./index.css";
 
 export default function App() {
@@ -26,6 +30,10 @@ export default function App() {
               <Route path="/" element={<Navigate to="/home" replace />} />
               <Route path="/home" element={<Home />} />
               <Route path="/CSharp/*" element={<CSharp />} />
+              <Route path="/CPlusPlus/*" element={<CPlusPlus />} />
+              <Route path="/JavaScript/*" element={<JavaScript />} />
+              <Route path="/HTML&CSS/*" element={<HTMLCSS />} />
+              <Route path="/React/*" element={<React />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<Navigate to="/home" replace />} />
             </Routes>

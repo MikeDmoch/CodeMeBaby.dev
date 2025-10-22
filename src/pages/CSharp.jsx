@@ -2,7 +2,7 @@ import { Link, Routes, Route, useLocation } from "react-router-dom";
 
 export default function CSharp() {
   const pages = import.meta.glob("./CSharp/*.jsx", { eager: true });
-  const lessons = ["CSharp Basics", "First Code"];
+  const lessons = ["Wprowadzenie", "Pierwszy kod"];
   const location = useLocation();
   let i = 0;
   let pagesArr = [];
