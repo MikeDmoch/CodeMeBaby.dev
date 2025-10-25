@@ -9,6 +9,7 @@ export default function CSharp() {
     "Operatory",
     "Instrukcje warunkowe",
     "Pętle",
+    "Tablice i kolekcje",
   ];
   const location = useLocation();
   let i = 0;
@@ -31,16 +32,19 @@ export default function CSharp() {
       {!isLessonPage ? (
         <>
           <h1>CSharp</h1>
-          <ul>
+          <ul className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-4 gap-1">
             {lessons.map((lesson, index) => (
-              <li key={index}>
-                <Link to={paths[index]}>{index + 1 + ". " + lesson}</Link>
+              <li
+                className="p-5 m-2 bg-zinc-800 rounded hover:bg-zinc-700"
+                key={index}
+              >
+                <Link to={paths[index]}>{lesson}</Link>
               </li>
             ))}
           </ul>
         </>
       ) : (
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-5">
           <h1>{lessons[currentLessonIndex]}</h1>
         </div>
       )}
