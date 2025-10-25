@@ -8,6 +8,7 @@ export default function CSharp() {
     "Zmienne",
     "Operatory",
     "Instrukcje warunkowe",
+    "Pętle",
   ];
   const location = useLocation();
   let i = 0;
@@ -33,7 +34,7 @@ export default function CSharp() {
           <ul>
             {lessons.map((lesson, index) => (
               <li key={index}>
-                <Link to={paths[index]}>{lesson}</Link>
+                <Link to={paths[index]}>{index + 1 + ". " + lesson}</Link>
               </li>
             ))}
           </ul>
