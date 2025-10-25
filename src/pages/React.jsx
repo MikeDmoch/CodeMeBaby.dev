@@ -23,7 +23,7 @@ export default function React() {
     <div>
       {!isLessonPage ? (
         <>
-          <h1>React</h1>
+          <h1>React --- UNDER CONSTRUCTION ---</h1>
           <ul>
             {lessons.map((lesson, index) => (
               <li key={index}>

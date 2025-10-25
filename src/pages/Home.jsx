@@ -3,8 +3,9 @@ export default function Home() {
     <div>
       <h1>Witaj na portalu CodeMeBaby.dev</h1>
       <p>
-        Możesz tutaj odkrywać niesamowite samouczki i zasoby dotyczące
-        programowania i tworzenia stron internetowych.
+        Możesz tutaj odkrywać samouczki i zasoby dotyczące programowania i
+        tworzenia stron internetowych.
+        <br /> --- UNDER CONSTRUCTION ---
       </p>
     </div>
   );

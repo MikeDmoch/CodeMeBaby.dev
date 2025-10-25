@@ -26,7 +26,19 @@ export default function Header() {
   return (
     <header className="bg-zinc-800 flex text-gray-100 p-2">
       <Link to="/home" className=" hover:rotate-3 transition">
-        CodeMeBaby.dev
+        CodeMeBaby.dev{" "}
+        {console.log(`
+              /$$$$$$                  /$$          
+             /$$__  $$                | $$          
+            | $$  \__/  /$$$$$$   /$$$$$$$  /$$$$$$ 
+            | $$       /$$__  $$ /$$__  $$ /$$__  $$
+            | $$      | $$  \ $$| $$  | $$| $$$$$$$$
+            | $$    $$| $$  | $$| $$  | $$| $$_____/
+            |  $$$$$$/|  $$$$$$/|  $$$$$$$|  $$$$$$$
+            \______/  \______/  \_______/ \_______/
+
+                😃 Witaj, deweloperze! Miłego kodowania! 🚀
+            `)}
       </Link>
     </header>
   );

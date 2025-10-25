@@ -1,4 +1,5 @@
 import CodeBlock from "../../components/CodeBlock";
+export const title = "Zmienne";
 export default function Variables() {
   const code1 = `int liczba = 10;`;
   const code2 = `
@@ -38,7 +39,7 @@ nazwisko = "Kowalski";`;
     <>
       <main>
         <div>
-          <h1>Zmienne w C# - Kompleksowy przewodnik</h1>
+          <h1>{title} - Kompleksowy przewodnik</h1>
         </div>
         <p>
           Zmienne to podstawowe elementy każdego języka programowania, a C# nie

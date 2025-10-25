@@ -1,10 +1,10 @@
 import CodeBlock from "../../components/CodeBlock";
-
+export const title = "Kolekcje i tablice";
 export default function ArraysCollections() {
   return (
     <main>
       <div>
-        <h1>Kolekcje i tablice - Kompleksowy przewodnik</h1>
+        <h1>{title} - Kompleksowy przewodnik</h1>
       </div>
 
       <h3>Wprowadzenie</h3>

@@ -1,9 +1,10 @@
 import CodeBlock from "../../components/CodeBlock";
+export const title = "Instrukcje warunkowe";
 export default function ConditionalStatements() {
   return (
     <main>
       <div>
-        <h1>Instrukcje Warunkowe w C# – Kompleksowy Przewodnik</h1>
+        <h1>{title} - Kompleksowy przewodnik</h1>
       </div>
       <p>
         Instrukcje warunkowe pozwalają na sterowanie przepływem programu na

@@ -1,4 +1,5 @@
 import CodeBlock from "../../components/CodeBlock";
+export const title = "Operatory";
 export default function Operators() {
   const code1 = `
 int a = 10;
@@ -64,7 +65,7 @@ Console.WriteLine(a >> 1); // Wynik: 2 (0010 w binarnym, przesunięcie w prawo)`
   return (
     <main>
       <div>
-        <h1>Operatory - kompleksowy przewodnik</h1>
+        <h1>{title} - Kompleksowy przewodnik</h1>
       </div>
       <p>
         Operatory w języku C# są kluczowym elementem umożliwiającym manipulację

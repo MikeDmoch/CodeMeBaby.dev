@@ -23,7 +23,7 @@ export default function CPlusPlus() {
     <div>
       {!isLessonPage ? (
         <>
-          <h1>C++</h1>
+          <h1>C++ --- UNDER CONSTRUCTION ---</h1>
           <ul>
             {lessons.map((lesson, index) => (
               <li key={index}>

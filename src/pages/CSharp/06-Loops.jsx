@@ -1,10 +1,10 @@
 import CodeBlock from "../../components/CodeBlock";
-
+export const title = "Pętle";
 export default function Loops() {
   return (
     <main>
       <div>
-        <h1>Pętle — Kompleksowy przewodnik</h1>
+        <h1>{title} - Kompleksowy przewodnik</h1>
       </div>
 
       <p>

@@ -23,7 +23,7 @@ export default function JavaScript() {
     <div>
       {!isLessonPage ? (
         <>
-          <h1>JavaScript</h1>
+          <h1>JavaScript --- UNDER CONSTRUCTION ---</h1>
           <ul>
             {lessons.map((lesson, index) => (
               <li key={index}>

@@ -1,5 +1,5 @@
 import CodeBlock from "../../components/CodeBlock";
-
+export const title = "Pierwszy program";
 const code1 = `using System;
                         
 class Program {
@@ -17,7 +17,7 @@ export default function CSharp_FirstCode() {
   return (
     <main>
       <div>
-        <h1>Pierwszy program w C#</h1>
+        <h1>{title}</h1>
       </div>
       <p>
         Jeśli dopiero zaczynasz swoją przygodę z językiem C#, pierwszym krokiem

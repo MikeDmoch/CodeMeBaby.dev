@@ -23,7 +23,7 @@ export default function HTMLCSS() {
     <div>
       {!isLessonPage ? (
         <>
-          <h1>HTML & CSS</h1>
+          <h1>HTML & CSS --- UNDER CONSTRUCTION ---</h1>
           <ul>
             {lessons.map((lesson, index) => (
               <li key={index}>

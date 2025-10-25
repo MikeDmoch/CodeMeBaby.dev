@@ -1,8 +1,9 @@
+export const title = "Wprowadzenie do pisania kodu";
 export default function CSharp_Basics() {
   return (
     <main>
       <div className="flex justify-center mb-4">
-        <strong>Wprowadzenie do pisania kodu w języku C#</strong>
+        <strong>{title}</strong>
       </div>
       <strong>Historia</strong>
       <p>
