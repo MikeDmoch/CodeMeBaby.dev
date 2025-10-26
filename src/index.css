@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* === Minimalistyczne formatowanie artykułów === */
 
 main {
   max-width: 900px;
@@ -12,7 +11,6 @@ main {
   font-size: 1.05rem;
 }
 
-/* Nagłówki */
 h1,
 h2,
 h3,
@@ -43,12 +41,10 @@ h4 {
   color: #c7c7cc;
 }
 
-/* Akapity */
 p {
   margin: 0.75rem 0;
 }
 
-/* Listy — bez kropek i numerów */
 ul,
 ol {
   margin: 0 0 0 0;
@@ -60,31 +56,29 @@ li {
   margin: 0 0;
 }
 
-/* Kod i bloki kodu */
+pre,
 code {
-  background-color: #27272a;
-  color: #93c5fd;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  font-family: "JetBrains Mono", "Fira Code", monospace;
-  font-size: 0.95rem;
+  margin: 0;
+  padding: 0;
 }
 
 pre {
-  background-color: #18181b;
   padding: 1rem;
   border-radius: 8px;
+  background-color: #18181b;
   overflow-x: auto;
-  margin: 1rem 0;
+  white-space: pre;
+  tab-size: 4;
 }
 
 pre code {
-  background: none;
-  color: #e4e4e7;
-  font-size: 0.95rem;
+  display: block;
+  padding: 0;
+  margin: 0;
+  white-space: pre;
+  text-indent: 0;
 }
 
-/* Tabele */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -112,7 +106,6 @@ tr:nth-child(even) {
   background-color: #1e1e20;
 }
 
-/* Cytaty */
 blockquote {
   border-left: 4px solid #3b82f6;
   padding-left: 1rem;
@@ -121,12 +114,10 @@ blockquote {
   margin: 1.2rem 0;
 }
 
-/* Odstępy */
 br {
   line-height: 1.5;
 }
 
-/* Responsywność */
 @media (max-width: 768px) {
   main {
     padding: 1.2rem;

@@ -1,36 +1,25 @@
-// import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="bg-zinc-800 rounded h-fit">
-      {/* <img src={logo} alt="Logo" /> */}
+    <div className="bg-zinc-800 rounded self-start">
       <ul>
-        <li className="px-4 py-2 border-b border-zinc-700 hover:bg-zinc-700 rounded-t">
-          <Link to="/JavaScript" className=" text-gray-100">
-            JavaScript
-          </Link>
-        </li>
-        <li className="px-4 py-2 border-b border-zinc-700 hover:bg-zinc-700">
-          <Link to="/HTML&CSS" className="text-gray-100">
-            HTML & CSS
-          </Link>
-        </li>
-        <li className="px-4 py-2 border-b border-zinc-700 hover:bg-zinc-700">
-          <Link to="/React" className="text-gray-100">
-            React
-          </Link>
-        </li>
-        <li className="px-4 py-2 border-b border-zinc-700 hover:bg-zinc-700">
-          <Link to="/CSharp" className="text-gray-100">
-            CSharp
-          </Link>
-        </li>
-        <li className="px-4 py-2 hover:bg-zinc-700 rounded-b">
-          <Link to="/CPlusPlus" className="text-gray-100">
-            C++
-          </Link>
-        </li>
+        {[
+          { path: "/JavaScript", label: "JavaScript" },
+          { path: "/HTML&CSS", label: "HTML & CSS" },
+          { path: "/React", label: "React" },
+          { path: "/CSharp", label: "C#" },
+          { path: "/CPlusPlus", label: "C++" },
+        ].map((item, index) => (
+          <li
+            key={item.path}
+            className=" hover:bg-zinc-700 border-b border-zinc-700 last:border-b-0 rounded transition"
+          >
+            <Link to={item.path} className="px-4 py-2 block text-gray-100">
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

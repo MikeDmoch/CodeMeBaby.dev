@@ -1,8 +1,11 @@
 import { Link, Routes, Route, useLocation } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export default function JavaScript() {
   const pages = import.meta.glob("./JavaScript/*.jsx", { eager: true });
-  const lessons = [];
+  const lessons = Object.values(pages).map(
+    (page) => page.title || "Bez tytułu"
+  );
   const location = useLocation();
   let i = 0;
   let pagesArr = [];
@@ -15,28 +18,33 @@ export default function JavaScript() {
   }
 
   const isLessonPage = location.pathname !== "/JavaScript";
-  const currentLessonIndex = paths.findIndex((path) =>
-    location.pathname.includes(path)
-  );
 
   return (
     <div>
       {!isLessonPage ? (
         <>
           <h1>JavaScript --- UNDER CONSTRUCTION ---</h1>
-          <ul>
+          <ul className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-4 gap-1">
             {lessons.map((lesson, index) => (
               <li key={index}>
-                <Link to={paths[index]}>{lesson}</Link>
+                <Link
+                  className="block p-5 m-2 bg-zinc-800 rounded hover:bg-zinc-700"
+                  to={paths[index]}
+                >
+                  {index + 1 + ". " + lesson}
+                </Link>
               </li>
             ))}
           </ul>
         </>
       ) : (
-        <div className="flex justify-center">
-          <h1>{lessons[currentLessonIndex]}</h1>
+        <div>
+          <Link to={"/JavaScript"}>
+            <ArrowLeft />
+          </Link>
         </div>
       )}
+
       <Routes>
         {Object.entries(pages).map(([path, component]) => {
           const routePath = path.replace(".", "").replace(".jsx", "");

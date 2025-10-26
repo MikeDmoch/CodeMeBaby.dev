@@ -26,11 +26,13 @@ export default function CSharp() {
           <h1>C# --- UNDER CONSTRUCTION ---</h1>
           <ul className="grid md:grid-cols-3 sm:grid-cols-1 lg:grid-cols-4 gap-1">
             {lessons.map((lesson, index) => (
-              <li
-                className="p-5 m-2 bg-zinc-800 rounded hover:bg-zinc-700"
-                key={index}
-              >
-                <Link to={paths[index]}>{index + 1 + ". " + lesson}</Link>
+              <li key={index}>
+                <Link
+                  className="block p-5 m-2 bg-zinc-800 rounded hover:bg-zinc-700"
+                  to={paths[index]}
+                >
+                  {index + 1 + ". " + lesson}
+                </Link>
               </li>
             ))}
           </ul>

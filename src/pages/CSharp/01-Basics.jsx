@@ -1,11 +1,13 @@
 export const title = "Wprowadzenie do pisania kodu";
+
 export default function CSharp_Basics() {
   return (
     <main>
-      <div className="flex justify-center mb-4">
-        <strong>{title}</strong>
+      <div className="header-container">
+        <h1>{title} - Kompleksowy Przewodnik</h1>
       </div>
-      <strong>Historia</strong>
+
+      <h2>Historia</h2>
       <p>
         C# to język programowania stworzony przez Microsoft na początku lat 2000
         jako część platformy .NET - pierwsza wersja pojawiła się w 2002 roku i
@@ -13,7 +15,8 @@ export default function CSharp_Basics() {
         Javy, oferując nowoczesną składnię, obiektowe podejście do programowania
         oraz wsparcie dla różnych paradygmatów, w tym programowania funkcyjnego.
       </p>
-      <strong>Zastosowania</strong>
+
+      <h2>Zastosowania</h2>
       <ul>
         <li>
           <strong>Aplikacje desktopowe</strong> – dzięki Windows Forms
@@ -36,14 +39,17 @@ export default function CSharp_Basics() {
           .NET do różnych rozwiązań cloudowych.
         </li>
       </ul>
-      <strong>Platforma .NET</strong>
+
+      <h2>Platforma .NET</h2>
       <p>
-        Wszechstronne i wydajne środowisko programistyczne stworzone przez
-        Microsoft, które pozwala na budowanie różnorodnych aplikacji. Umożliwia
-        programowanie zarówno dla systemów Windows, jak i dla innych rozwiązań.
+        .NET to wszechstronne i wydajne środowisko programistyczne stworzone
+        przez Microsoft, które pozwala na budowanie różnorodnych aplikacji.
+        Umożliwia programowanie zarówno dla systemów Windows, jak i innych
+        platform. .NET łączy w sobie wiele technologii, co czyni go uniwersalnym
+        ekosystemem do tworzenia nowoczesnych rozwiązań.
       </p>
 
-      <strong>Kluczowe cechy .NET:</strong>
+      <h3>Kluczowe cechy platformy .NET</h3>
       <ul>
         <li>
           <strong>Jeden ekosystem</strong> – pozwala na tworzenie aplikacji
@@ -60,100 +66,104 @@ export default function CSharp_Basics() {
           obciążeniu.
         </li>
         <li>
-          <strong>Bogaty zestaw narzędzi</strong> – dostęp do rozbudowanych
-          frameworków, narzędzi i gotowych komponentów ułatwia pracę
-          programistów.
+          <strong>Bogaty zestaw narzędzi</strong> – dostęp do frameworków,
+          bibliotek i gotowych komponentów znacząco przyspiesza rozwój
+          oprogramowania.
         </li>
         <li>
-          <strong>Łatwość integracji z chmurą</strong> – świetna współpraca z
-          Microsoft Azure umożliwia szybkie wdrażanie aplikacji chmurowych.
+          <strong>Integracja z chmurą</strong> – pełna współpraca z Microsoft
+          Azure umożliwia łatwe wdrażanie i skalowanie aplikacji chmurowych.
         </li>
       </ul>
 
-      <strong>Środowisko programistyczne</strong>
+      <h2>Środowisko programistyczne</h2>
       <p>
-        Aby pisać aplikacje C# należy pobrać odpowiednie środowisko, które można
-        powiedzieć, że jest zaawansowanym edytorem tekstu przeznaczonym do
-        pisania kodu, które ma dodatkowe możliwości związane z głównym
-        zastosowaniem. Najpopularniejsze środowiska to{" "}
-        <strong>
-          Visual Studio (IDE) i Visual Studio Code (edytor tekstu)
-        </strong>
-        . VSCode jest rozwiązaniem w pełni darmowym, natomiast Visual Studio
-        posiada wersję Community, która również jest darmowa dla użytkowników
-        indywidualnych i ma pewne ograniczenia w stosunku do płatnej wersji
-        Professional. Co więcej, VSCode jest lżejszy i bardziej uniwersalny, a
-        Visual Studio oferuje bardziej rozbudowane narzędzia i wsparcie dla
-        różnych typów projektów.
+        Aby pisać aplikacje w C#, potrzebne jest odpowiednie środowisko pracy –
+        czyli edytor lub IDE (zintegrowane środowisko programistyczne).
+        Najpopularniejsze z nich to <strong>Visual Studio</strong> i{" "}
+        <strong>Visual Studio Code</strong>.
       </p>
-      <strong>Porównanie Visual Studio i Visual Studio Code</strong>
-      <table className="min-w-full">
-        <thead className="flex justify-center">
-          <tr className="border-b">
+      <p>
+        Visual Studio to w pełni funkcjonalne IDE, zawierające wszystkie
+        potrzebne narzędzia do tworzenia i debugowania aplikacji. Visual Studio
+        Code (VS Code) jest natomiast lekkim edytorem tekstu, który dzięki
+        rozszerzeniom można dostosować do wielu języków i frameworków.
+      </p>
+
+      <h3>Porównanie Visual Studio i Visual Studio Code</h3>
+      <table>
+        <thead>
+          <tr>
             <th>Cecha</th>
             <th>Visual Studio (VS)</th>
             <th>Visual Studio Code (VS Code)</th>
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b">
+          <tr>
             <td>Typ narzędzia</td>
             <td>Pełne IDE</td>
             <td>Lekki edytor kodu</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Producent</td>
             <td>Microsoft</td>
             <td>Microsoft</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Zastosowanie</td>
-            <td>Tworzenie aplikacji w .NET, C++, Python, Java</td>
+            <td>Tworzenie aplikacji .NET, C++, Python, Java</td>
             <td>Uniwersalny edytor dla wielu języków</td>
           </tr>
-          <tr className="border-b">
-            <td>Waga i wydajność</td>
-            <td>Cięższe, wymaga więcej zasobów</td>
+          <tr>
+            <td>Wydajność</td>
+            <td>Wymaga więcej zasobów</td>
             <td>Lekkie i szybkie</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Obsługiwane języki</td>
-            <td>Głównie .NET (C#, VB, F#), C++, Python</td>
-            <td>Wiele języków (JavaScript, Python, Go, itp.)</td>
+            <td>C#, F#, VB, C++, Python</td>
+            <td>JavaScript, TypeScript, Python, Go i inne</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Obsługa projektów</td>
             <td>Rozbudowane zarządzanie projektami</td>
-            <td>Prostsze, opiera się na folderach</td>
+            <td>Prostsze – opiera się na folderach</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Debugowanie</td>
             <td>Wbudowany debugger dla .NET i innych języków</td>
             <td>Debugger wymaga rozszerzeń</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Wsparcie dla Git</td>
             <td>Wbudowana obsługa Git</td>
             <td>Wbudowana obsługa Git</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Rozszerzalność</td>
-            <td>Pluginy, ale mniej niż w VS Code</td>
-            <td>Tysiące rozszerzeń w Marketplace</td>
+            <td>Pluginy (mniej niż VS Code)</td>
+            <td>Bogaty marketplace z tysiącami rozszerzeń</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Cena</td>
-            <td>Community darmowa, ale wersje Pro i Enterprise płatne</td>
+            <td>Wersja Community darmowa, Pro/Enterprise płatne</td>
             <td>Całkowicie darmowy</td>
           </tr>
-          <tr className="border-b">
+          <tr>
             <td>Platformy</td>
-            <td>Windows</td>
-            <td>Windows, Mac, Linux</td>
+            <td>Tylko Windows</td>
+            <td>Windows, macOS, Linux</td>
           </tr>
         </tbody>
       </table>
-      <p>Wybór między oprogramowaniami zależy od indywidualnych preferencji.</p>
+
+      <p>
+        Wybór pomiędzy Visual Studio a VS Code zależy od rodzaju projektu i
+        preferencji użytkownika. Do dużych aplikacji .NET lepiej sprawdza się
+        Visual Studio, natomiast VS Code to świetne narzędzie do lżejszych
+        projektów, skryptów i nauki programowania.
+      </p>
     </main>
   );
 }
