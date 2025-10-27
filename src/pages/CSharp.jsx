@@ -1,5 +1,6 @@
 import { Link, Routes, Route, useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+//import DownloadPDF from "../components/DownloadPDF";
 
 export default function CSharp() {
   const pages = import.meta.glob("./CSharp/*.jsx", { eager: true });
@@ -16,7 +17,9 @@ export default function CSharp() {
     paths[i] = path.replace(".", "").replace(".jsx", "");
     i++;
   }
-
+  const currentLessonTitle = lessons.find((_, index) =>
+    location.pathname.includes(paths[index])
+  );
   const isLessonPage = location.pathname !== "/CSharp";
 
   return (
@@ -57,6 +60,8 @@ export default function CSharp() {
           );
         })}
       </Routes>
+
+      {/*isLessonPage && <DownloadPDF title={currentLessonTitle} />*/}
     </div>
   );
 }
