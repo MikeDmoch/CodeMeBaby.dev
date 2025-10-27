@@ -22,7 +22,7 @@ export default function InterfejsyKlasyAbstrakcyjne() {
       <p>
         Klasa abstrakcyjna to taka, której nie można utworzyć (nie można
         stworzyć jej obiektu). Może zawierać zarówno metody z implementacją, jak
-        i metody abstrakcyjne — czyli takie, które muszą zostać zdefiniowane w
+        i metody abstrakcyjne - czyli takie, które muszą zostać zdefiniowane w
         klasach pochodnych.
       </p>
 
@@ -115,7 +115,7 @@ foreach (var f in figury)
       <h3>Interfejsy</h3>
       <p>
         Interfejs definiuje zestaw metod, właściwości lub zdarzeń, które klasa
-        musi zaimplementować. Nie zawiera implementacji — określa tylko, co dana
+        musi zaimplementować. Nie zawiera implementacji - określa tylko, co dana
         klasa ma potrafić.
       </p>
 
@@ -147,7 +147,7 @@ pojazd.Zatrzymaj();`}
       />
 
       <p>
-        Interfejs określa „umowę” — każda klasa, która go implementuje, musi
+        Interfejs określa „umowę” - każda klasa, która go implementuje, musi
         dostarczyć definicje wszystkich jego elementów.
       </p>
 
@@ -289,7 +289,7 @@ public class Komputer : IUrzadzenie
 
       <h3>Łączenie interfejsów z klasami abstrakcyjnymi</h3>
       <p>
-        Często w dużych projektach wykorzystuje się oba mechanizmy razem —
+        Często w dużych projektach wykorzystuje się oba mechanizmy razem -
         interfejs definiuje, co klasa powinna robić, a klasa abstrakcyjna
         dostarcza część wspólnej logiki.
       </p>
@@ -334,7 +334,7 @@ g.Uruchom();`}
       </p>
 
       <p>
-        W praktyce — jeśli potrzebujesz wspólnego kodu, użyj klasy
+        W praktyce - jeśli potrzebujesz wspólnego kodu, użyj klasy
         abstrakcyjnej. Jeśli chcesz zdefiniować tylko „umowę” zachowania, użyj
         interfejsu. Umiejętne łączenie tych dwóch mechanizmów prowadzi do
         bardziej elastycznego i zrozumiałego kodu.

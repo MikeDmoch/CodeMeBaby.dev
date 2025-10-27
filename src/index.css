@@ -11,6 +11,9 @@ main {
   font-size: 1.05rem;
 }
 
+body {
+  background-color: oklch(27.4% 0.006 286.033);
+}
 h1,
 h2,
 h3,

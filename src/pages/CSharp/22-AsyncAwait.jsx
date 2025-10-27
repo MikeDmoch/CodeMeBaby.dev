@@ -20,7 +20,7 @@ export default function AsyncAwait() {
 
       <h3>Problem z kodem synchronicznym</h3>
       <p>
-        Kod synchroniczny wykonuje się liniowo — dopóki jedna operacja się nie
+        Kod synchroniczny wykonuje się liniowo - dopóki jedna operacja się nie
         zakończy, kolejne nie zostaną rozpoczęte. Może to blokować interfejs
         użytkownika lub opóźniać inne działania.
       </p>

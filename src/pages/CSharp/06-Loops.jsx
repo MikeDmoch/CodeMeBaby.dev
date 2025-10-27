@@ -243,7 +243,7 @@ Witaj, Piotr!`}
       </p>
 
       <p>
-        Przykład — <code>break</code>:
+        Przykład - <code>break</code>:
       </p>
       <CodeBlock
         code={`
@@ -276,7 +276,7 @@ class Program
       />
 
       <p>
-        Przykład — <code>continue</code>:
+        Przykład - <code>continue</code>:
       </p>
       <CodeBlock
         code={`

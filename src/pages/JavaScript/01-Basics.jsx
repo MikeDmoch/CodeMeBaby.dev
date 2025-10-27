@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/CodeBlock";
 
-export const title = "Wprowadzenie do JavaScript";
+export const title = "Wprowadzenie";
 
 export default function JS_Wprowadzenie() {
   return (
@@ -228,7 +228,7 @@ console.log(liczby[0]);`}
       <h3>Podsumowanie</h3>
       <p>
         JavaScript to wszechstronny język programowania, który napędza
-        nowoczesny internet. W tej lekcji poznaliśmy podstawowe pojęcia —
+        nowoczesny internet. W tej lekcji poznaliśmy podstawowe pojęcia -
         zmienne, typy danych, funkcje i pętle. W kolejnych krokach zagłębimy się
         w bardziej zaawansowane zagadnienia, takie jak operatory, obiekty,
         asynchroniczność i moduły.

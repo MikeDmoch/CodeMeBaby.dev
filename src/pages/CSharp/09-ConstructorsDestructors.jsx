@@ -9,7 +9,7 @@ export default function ConstructorsDestructors() {
 
       <p>
         Kiedy tworzysz nowy obiekt w C#, potrzebujesz sposobu na jego
-        inicjalizację. Tu właśnie na scenę wkraczają konstruktory — specjalne
+        inicjalizację. Tu właśnie na scenę wkraczają konstruktory - specjalne
         metody, które są wywoływane automatycznie podczas tworzenia obiektu.
       </p>
 
@@ -36,7 +36,7 @@ export default function ConstructorsDestructors() {
 
       <p>
         W powyższym przykładzie mamy klasę <code>Osoba</code>, która ma
-        konstruktor przyjmujący jeden argument — imię. Kiedy tworzysz nową
+        konstruktor przyjmujący jeden argument - imię. Kiedy tworzysz nową
         instancję tej klasy, musisz podać imię:
       </p>
 

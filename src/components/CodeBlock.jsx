@@ -12,6 +12,7 @@ export default function CodeBlock({ code, language = "javascript" }) {
   return (
     <pre className={`language-${language}`}>
       <code className={`language-${language}`}>{code.trim()}</code>
+      {/* <button>Copy</button>*/}
     </pre>
   );
 }
