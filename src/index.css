@@ -63,12 +63,15 @@ pre,
 code {
   margin: 0;
   padding: 0;
+  background-color: oklch(27.4% 0.006 286.033);
+  padding: 0.2em;
+  border-radius: 0.3em;
 }
 
 pre {
   padding: 1rem;
   border-radius: 8px;
-  background-color: #18181b;
+  background-color: oklch(27.4% 0.006 286.033);
   overflow-x: auto;
   white-space: pre;
   tab-size: 4;

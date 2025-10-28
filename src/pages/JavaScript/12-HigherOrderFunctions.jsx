@@ -1,6 +1,6 @@
 import CodeBlock from "../../components/CodeBlock";
 
-export const title = "Funkcje wyższego rzędu i callbacki";
+export const title = "Funkcje wyższego rzędu";
 
 export default function HigherOrderFunctions() {
   return (
